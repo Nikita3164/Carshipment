@@ -136,7 +136,7 @@ h1 {
     align-items: center;
   }
 
-  .swiper-button-next1, .swiper-rtl .swiper-button-prev1{
+  .swiper-button-next, .swiper-rtl .swiper-button-prev{
     right: 40px !important; 
     left: auto;
     margin-top: 500px;
@@ -154,12 +154,6 @@ h1 {
     --swiper-theme-color: black;
   }
 
-  .t1{
-    --swiper-theme-color: white;
-  }
-
-
-  
 
 .swiper-pagination{
     position: static !important;
