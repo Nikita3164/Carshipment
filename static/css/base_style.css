@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+    margin: 0;
+    background-color: #242424;
+}
+
+.header {
+    height: 100px;
+    background-color: white;
+    
+}
+
+.menu, .logo, .phone{
+    display: inline-block;
+}
+
+.menu img, .phone img{
+    width: 60px;
+    height: 60px;
+}
+
+.logo img{
+    width: 250px;
+    height: 80px;
+}
+
+
+.menu{
+    position:absolute;
+    padding-top: 20px;
+    padding-left: 50px;
+}    
+
+
+.logo{
+    padding-top: 10px;
+    padding-left: 43%;
+}
+
+.phone{
+    float: right;
+    padding-top: 20px;
+    padding-right: 50px;
+}
+
+.promotion img{
+    width: 100%;
+}
+
+.text{
+    color: #e5b876;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 88px;
+    position: absolute;
+    right: 0;
+    padding-right: 6%;
+    padding-top: 7%;
+}
+
+.t2{
+    padding-top: 70px;
+}
+
+.t3{
+    padding-top: 140px;
+}
+
+.container{
+    max-width: 1638px;
+    margin: 0 auto;
+}
+
+.models{
+    background-color: #242424;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.models.visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+
+.square{
+    width: 765px;
+    height: 765px;
+    background-color: black;
+    display: inline-block;
+}
+
+.about{
+    font-family: 'Montserrat', sans-serif;
+    width: 788px;
+    height: 602px;
+    color: white;
+    font-size: 90px;
+    float: right;
+    display: inline-block;
+    text-align: right;
+    
+}
+
+.s1{
+    float: right;
+}
+
+.about1{
+    font-family: 'Montserrat', sans-serif;
+    width: 788px;
+    height: 602px;
+    color: white;
+    font-size: 90px;
+    display: inline-block;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+  .swiper{
+    height: 100%;
+  }
+
+  .swiper-slide{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-button-next1, .swiper-rtl .swiper-button-prev1{
+    right: 40px !important; 
+    left: auto;
+    margin-top: 500px;
+    
+  }
+
+  .swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: 40px !important; 
+    right: auto;
+    margin-top: 500px;
+    
+  }
+
+  .swiper-button-prev, .swiper-button-next{
+    --swiper-theme-color: black;
+  }
+
+  .t1{
+    --swiper-theme-color: white;
+  }
+
+
+  
+
+.swiper-pagination{
+    position: static !important;
+    --swiper-theme-color: black;
+}
+
+
+
+.swiper-pagination1{
+    margin: 8px 0;
+    --swiper-pagination-bullet-inactive-color: rgb(207, 196, 196);
+    --swiper-theme-color: white;
+    
+}
+
+.about_us{
+    height: 665px;
+    background-color: black;
+}
+
+.carshipment{
+    background-color: white;
+    height: 970px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.carshipment.visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+
+.carshipment img{
+    width: 891px;
+    height: 55px;
+    padding: 140px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    text-align: center;
+}
+
+.press_realises{
+    background-color: white;
+    height: 800px;
+}
+
+.title_press{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px;
+    padding: 15px 0; 
+}
+
+.news{
+    height: 440px;
+    width: 100%;
+    background-color: #e2e2e2;
+}
+
+.picture{
+    width: 440px;
+    height: 440px;
+    background-color: black;
+    display: inline-block;
+}
+
+.news_text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    padding-right: 50px;
+    display: inline-block;
+    width: 1113px;
+    height: 300px;
+    float: right;
+}
+
+.swiper-pagination3{
+    margin: 10px 0;
+}
