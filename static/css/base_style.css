@@ -139,14 +139,14 @@ h1 {
   .swiper-button-next, .swiper-rtl .swiper-button-prev{
     right: 40px !important; 
     left: auto;
-    margin-top: 500px;
+    
     
   }
 
   .swiper-button-prev, .swiper-rtl .swiper-button-next{
     left: 40px !important; 
     right: auto;
-    margin-top: 500px;
+    
     
   }
 
@@ -167,6 +167,10 @@ h1 {
     --swiper-pagination-bullet-inactive-color: rgb(207, 196, 196);
     --swiper-theme-color: white;
     
+}
+
+#auto_sw{
+    --swiper-theme-color: white; 
 }
 
 .carshipment{
