@@ -5,6 +5,8 @@ body {
     background-color: #242424;
 }
 
+/*Хэдер*/
+
 .header {
     height: 100px;
     background-color: white;
@@ -44,6 +46,8 @@ body {
     padding-right: 50px;
 }
 
+/*Раздел с продажами*/
+
 .promotion img{
     width: 100%;
 }
@@ -67,8 +71,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 42px;
     text-align: center;
-    padding-top: 15px;
-    
+    padding-top: 15px;  
 }
 
 .text{
@@ -93,6 +96,8 @@ body {
     max-width: 1638px;
     margin: 0 auto;
 }
+
+/*Модели*/
 
 .models{
     background-color: #242424;
@@ -133,7 +138,7 @@ body {
     right: 10px;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 37px;
+    font-size: 34px;
     padding-top: 10px;
 }
 
@@ -166,44 +171,43 @@ h1 {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
-    padding-top: 15px;
+    padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
     color: white;
 }
 
-  .swiper{
-    height: 100%;
-  }
+/*Слайдер*/
 
-  .swiper-slide{
+.swiper{
+    height: 100%;
+}
+
+.swiper-slide{
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-button-next, .swiper-rtl .swiper-button-prev{
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
     right: 40px !important; 
     left: auto;  
-  }
+}
 
-  .swiper-button-prev, .swiper-rtl .swiper-button-next{
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
     left: 40px !important; 
     right: auto;
-  }
+}
 
-  .swiper-button-prev, .swiper-button-next{
+.swiper-button-prev, .swiper-button-next{
     --swiper-theme-color: black;
-  }
-
+}
 
 .swiper-pagination{
     position: static !important;
     --swiper-theme-color: black;
 }
-
-
 
 .swiper-pagination1{
     margin: 8px 0;
@@ -215,6 +219,29 @@ h1 {
 #auto_sw{
     --swiper-theme-color: white; 
 }
+
+.all_models{
+    margin: 50px auto;
+    width: 510px;
+    height: 110px;
+}
+
+.all_border{
+    border: 2px solid white;
+    border-radius: 7px;
+    width: 510px;
+    height: 110px;
+}
+
+.all-text{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    text-align: center;
+    padding-top: 30px;  
+}
+
+/*Раздел с текстом*/
 
 .carshipment{
     background-color: white;
@@ -244,9 +271,11 @@ h1 {
     text-align: center;
 }
 
+/*Пресс-релизы*/
+
 .press_realises{
     background-color: white;
-    height: 800px;
+    height: 675px;
 }
 
 .title_press{
