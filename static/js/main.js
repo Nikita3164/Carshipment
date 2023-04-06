@@ -10,6 +10,7 @@ var autoSwiper = new Swiper(".autoSwiper", {
     mousewheel: true,
     keyboard: true,
 });
+
 var infoSwiper = new Swiper(".infoSwiper", {
     spaceBetween: 30,
     navigation: {
@@ -18,6 +19,20 @@ var infoSwiper = new Swiper(".infoSwiper", {
     },
     pagination: {
         el: ".swiper-pagination2",
+    },
+    mousewheel: true,
+    keyboard: true,
+});
+
+var newsSwiper = new Swiper(".newsSwiper", {
+    spaceBetween: 30,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination3",
+        clickable: true,
     },
     mousewheel: true,
     keyboard: true,
@@ -35,6 +50,16 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener('scroll', function() {
     var element = document.querySelector('.carshipment');
+    var position = element.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 2;
+
+    if (position < screenPosition) {
+        element.classList.add('visible');
+    }
+});
+
+window.addEventListener('scroll', function() {
+    var element = document.querySelector('.press_realises');
     var position = element.getBoundingClientRect().top;
     var screenPosition = window.innerHeight / 2;
 

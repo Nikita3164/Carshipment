@@ -23,7 +23,7 @@
         <div class="text"><div class="t2">продвижению</div></div>
         <div class="text"><div class="t3">продаж</div></div>
         <div class="more"><div class="more-border"><div class="more-text">Подробнее</div></div></div>
-        <img src="static/img/keys.png">
+        <img src="static/img/cars.png">
     </div>
 
     <div class="models">
@@ -113,69 +113,7 @@
             © 2023 carshipment.ru - новый способ приобретения автомобилей. 
             Копирование материалов запрещено.
         </div>
-    </div>
-
-    </div>
-    <script>
-        var autoSwiper = new Swiper(".autoSwiper", {
-            spaceBetween: 30,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination1",
-                clickable: true,
-            },
-            mousewheel: true,
-            keyboard: true,
-        });
-        var infoSwiper = new Swiper(".infoSwiper", {
-            spaceBetween: 30,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination2",
-                clickable: true,
-            },
-            mousewheel: true,
-            keyboard: true,
-        });
-        var newsSwiper = new Swiper(".newsSwiper", {
-            spaceBetween: 30,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination3",
-                clickable: true,
-            },
-            mousewheel: true,
-            keyboard: true,
-        });
-
-        window.addEventListener('scroll', function() {
-            var element = document.querySelector('.models');
-            var position = element.getBoundingClientRect().top;
-            var screenPosition = window.innerHeight / 2;
-
-            if (position < screenPosition) {
-                element.classList.add('visible');
-            }
-        });
-
-        window.addEventListener('scroll', function() {
-            var element = document.querySelector('.carshipment');
-            var position = element.getBoundingClientRect().top;
-            var screenPosition = window.innerHeight / 2;
-
-            if (position < screenPosition) {
-                element.classList.add('visible');
-            }
-        });
-    </script>
+    </div> 
+    <script type="text/javascript" src="/static/js/main.js"></script>
 </body>
 </html>
