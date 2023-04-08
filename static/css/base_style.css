@@ -5,6 +5,11 @@ body {
     background-color: #242424;
 }
 
+.container{
+    max-width: 1652px;
+    margin: 0 auto;
+}
+
 /*Хэдер*/
 
 .header {
@@ -92,11 +97,6 @@ body {
     padding-top: 140px;
 }
 
-.container{
-    max-width: 1638px;
-    margin: 0 auto;
-}
-
 /*Модели*/
 
 .models{
@@ -117,6 +117,10 @@ body {
     background-color: black;
     display: inline-block;
     position: relative;
+}
+
+.square img{
+    width: 100%;
 }
 
 .line{
@@ -293,7 +297,7 @@ h1 {
 }
 
 .news{
-    height: 440px;
+    height: 100%;
     width: 100%;
     background-color: #e2e2e2;
 }
@@ -336,4 +340,28 @@ h1 {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+@media (max-width: 1652px){
+    .container{
+        max-width: 1300px;
+    }
+
+    .square{
+        width: 510px;
+        height: 510px;
+    }
+
+    .info{
+        font-size: 60px;
+    }
+
+    .news_text{
+        width: 940px;
+    }
+
+    .picture{
+        width: 300px;
+        height: 300px;
+    }
 }
