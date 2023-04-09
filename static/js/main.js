@@ -11,19 +11,6 @@ var autoSwiper = new Swiper(".autoSwiper", {
     keyboard: true,
 });
 
-var infoSwiper = new Swiper(".infoSwiper", {
-    spaceBetween: 30,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination2",
-    },
-    mousewheel: true,
-    keyboard: true,
-});
-
 var newsSwiper = new Swiper(".newsSwiper", {
     spaceBetween: 30,
     navigation: {
@@ -39,7 +26,57 @@ var newsSwiper = new Swiper(".newsSwiper", {
 });
 
 window.addEventListener('scroll', function() {
-    var element = document.querySelector('.models');
+    var element = document.querySelector('h1');
+    var position = element.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 2;
+
+    if (position < screenPosition) {
+        element.classList.add('visible');
+    }
+});
+
+window.addEventListener('scroll', function() {
+    var element = document.querySelector('.car-img');
+    var position = element.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 2;
+
+    if (position < screenPosition) {
+        element.classList.add('visible');
+    }
+});
+
+window.addEventListener('scroll', function() {
+    var element = document.querySelector('.car1-img');
+    var position = element.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 2;
+
+    if (position < screenPosition) {
+        element.classList.add('visible');
+    }
+});
+
+window.addEventListener('scroll', function() {
+    var element = document.querySelector('.about');
+    var position = element.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 2;
+
+    if (position < screenPosition) {
+        element.classList.add('visible');
+    }
+});
+
+window.addEventListener('scroll', function() {
+    var element = document.querySelector('.about1');
+    var position = element.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 2;
+
+    if (position < screenPosition) {
+        element.classList.add('visible');
+    }
+});
+
+window.addEventListener('scroll', function() {
+    var element = document.querySelector('.all_models');
     var position = element.getBoundingClientRect().top;
     var screenPosition = window.innerHeight / 2;
 

@@ -34,11 +34,45 @@ body {
 
 
 .menu{
-    position:absolute;
-    padding-top: 20px;
-    padding-left: 50px;
-}    
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-bottom: 15px;
+}  
 
+.menu_content{
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.88);
+    min-width: 1100px;
+    z-index: 1;
+    margin-top: 15px;
+    margin-left: -50px;
+}
+
+.menu_line{
+    font-size: 48px;
+    padding: 20px 78px;
+    transition: 0.2s;
+}
+
+.menu_content a{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.menu:hover .menu_content{
+    display: block;
+}
+
+.menu:hover img{
+    filter: invert(0.5);
+}
+
+.menu_content .menu_line:hover{
+    background-color: rgba(255, 255, 255, 1);
+}
 
 .logo{
     padding-top: 10px;
@@ -101,25 +135,43 @@ body {
 
 .models{
     background-color: #242424;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: white;
     opacity: 0;
     transform: translate(-50%, 0);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.models.visible {
+h1.visible {
     opacity: 1;
     transform: translate(0, 0);
-  }
+}
 
-.square{
+.car-img{
     width: 765px;
     height: 765px;
     background-color: black;
     display: inline-block;
     position: relative;
+    opacity: 0;
+    transform: translate(0, 40%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.square img{
+.car-img.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.car-img img{
     width: 100%;
 }
 
@@ -128,12 +180,12 @@ body {
     bottom: 0;
     width: 100%;
     height: 70px;
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: rgba(55, 55, 55, 0.85);
     transition: 0.5s;
 }
 
 .line:hover{
-    background-color: rgba(128, 128, 128, 1);
+    background-color: rgba(55, 55, 55, 1);
     cursor: pointer;
 }
 
@@ -151,15 +203,47 @@ body {
     width: 788px;
     height: 602px;
     color: white;
-    font-size: 90px;
+    font-size: 100px;
     float: right;
     display: inline-block;
     text-align: right;
-    
+    opacity: 0;
+    transform: translate(0, 30%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.s1{
+.about.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.block1{
+    padding-bottom: 80px;
+}
+
+.block2{
+    height: 765px;
+}
+
+.car1-img{
+    width: 765px;
+    height: 765px;
+    background-color: black;
+    display: inline-block;
+    position: relative;
     float: right;
+    opacity: 0;
+    transform: translate(0, 40%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.car1-img.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.car1-img img{
+    width: 100%;
 }
 
 .about1{
@@ -167,18 +251,16 @@ body {
     width: 788px;
     height: 602px;
     color: white;
-    font-size: 90px;
+    font-size: 100px;
     display: inline-block;
+    opacity: 0;
+    transform: translate(0, 30%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-h1 {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-    color: white;
+.about1.visible {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 /*Слайдер*/
@@ -228,6 +310,14 @@ h1 {
     margin: 50px auto;
     width: 510px;
     height: 110px;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.all_models.visible{
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .all_border{
@@ -276,6 +366,9 @@ h1 {
 }
 
 /*Пресс-релизы*/
+.fon{
+    background-color: white;
+}
 
 .press_realises{
     background-color: white;
@@ -329,10 +422,6 @@ h1 {
     background-color: black;
 }
 
-.footer img{
-    width: 100%;
-}
-
 .copyright{
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
@@ -344,12 +433,31 @@ h1 {
 
 @media (max-width: 1652px){
     .container{
-        max-width: 1300px;
+        max-width: 1400px;
     }
 
-    .square{
-        width: 510px;
-        height: 510px;
+    .car-img{
+        width: 700px;
+        height: 700px;
+    }
+
+    .about{
+        font-size: 85px;
+        width: 650px;
+    }
+
+    .car1-img{
+        width: 700px;
+        height: 700px;
+    }
+
+    .about1{
+        font-size: 85px;
+        width: 650px;
+    }
+
+    .block2{
+        height: 700px;
     }
 
     .info{
@@ -358,10 +466,11 @@ h1 {
 
     .news_text{
         width: 940px;
+        font-size: 40px;
     }
 
     .picture{
-        width: 300px;
-        height: 300px;
+        width: 370px;
+        height: 370px;
     }
 }
