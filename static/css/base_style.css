@@ -13,7 +13,7 @@ body {
 /*Хэдер*/
 
 .header {
-    height: 100px;
+    height: 70px;
     background-color: white;
     
 }
@@ -23,21 +23,19 @@ body {
 }
 
 .menu img, .phone img{
-    width: 60px;
-    height: 60px;
+    width: 50px;
 }
 
 .logo img{
-    width: 250px;
-    height: 80px;
+    width: 174px;
 }
 
 
 .menu{
     position: absolute;
-    margin-top: 20px;
-    margin-left: 50px;
-    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-left: 30px;
+    padding-bottom: 7px;
 }  
 
 .menu_content{
@@ -75,14 +73,14 @@ body {
 }
 
 .logo{
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 43%;
 }
 
 .phone{
     float: right;
-    padding-top: 20px;
-    padding-right: 50px;
+    padding-top: 10px;
+    padding-right: 30px;
 }
 
 /*Раздел с продажами*/
@@ -339,7 +337,7 @@ h1.visible {
 
 .carshipment{
     background-color: white;
-    height: 970px;
+    padding-bottom: 30px;
     opacity: 0;
     transform: translate(-50%, 0);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -372,7 +370,7 @@ h1.visible {
 
 .press_realises{
     background-color: white;
-    height: 675px;
+    padding-bottom: 30px;
     opacity: 0;
     transform: translate(-50%, 0);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -408,7 +406,6 @@ h1.visible {
     padding-right: 50px;
     display: inline-block;
     width: 1113px;
-    height: 300px;
     float: right;
 }
 
@@ -472,5 +469,123 @@ h1.visible {
     .picture{
         width: 370px;
         height: 370px;
+    }
+}
+
+@media (max-width: 1500px){
+    .container{
+        max-width: 1200px;
+    }
+
+    .car-img{
+        width: 600px;
+        height: 600px;
+    }
+
+    .about{
+        font-size: 73px;
+        width: 550px;
+    }
+
+    .car1-img{
+        width: 600px;
+        height: 600px;
+    }
+
+    .about1{
+        font-size: 73px;
+        width: 550px;
+    }
+
+    .block2{
+        height: 600px;
+    }
+
+    .info{
+        font-size: 55px;
+    }
+
+    .news_text{
+        width: 840px;
+        font-size: 35px;
+    }
+
+    .picture{
+        width: 300px;
+        height: 300px;
+    }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: 7px !important; 
+        left: auto;  
+    }
+    
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 7px !important; 
+        right: auto;
+    }
+}
+
+@media (max-width: 960px){
+    .container{
+        max-width: 800px;
+    }
+
+    .car-img{
+        width: 600px;
+        height: 600px;
+        display: block;
+        float: none;
+    }
+
+    .about{
+        font-size: 73px;
+        width: 550px;
+        display: block;
+        float: none;
+    }
+
+    .car1-img{
+        width: 600px;
+        height: 600px;
+        display: block;
+        float: none;
+    }
+
+    .about1{
+        font-size: 73px;
+        width: 550px;
+        display: block;
+        float: none;
+    }
+
+    .block2{
+        height: 0;
+    }
+
+    .info{
+        font-size: 55px;
+    }
+
+    .news_text{
+        width: 750px;
+        font-size: 35px;
+        display: block;
+    }
+
+    .picture{
+        width: 300px;
+        height: 300px;
+        display: block;
+    }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: 7px !important; 
+        left: auto;  
+    }
+    
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 7px !important; 
+        right: auto;
     }
 }
