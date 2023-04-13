@@ -42,9 +42,9 @@ body {
     display: none;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.88);
-    min-width: 1100px;
-    z-index: 1;
-    margin-top: 15px;
+    /*min-width: 1100px;*/
+    z-index: 2;
+    margin-top: 6px;
     margin-left: -50px;
 }
 
@@ -350,7 +350,6 @@ h1.visible {
 
 .carshipment img{
     width: 891px;
-    height: 55px;
     padding: 140px 0;
     display: block;
     margin-left: auto;
@@ -528,64 +527,184 @@ h1.visible {
 
 @media (max-width: 960px){
     .container{
-        max-width: 800px;
+        max-width: 780px;
     }
 
     .car-img{
-        width: 600px;
-        height: 600px;
-        display: block;
-        float: none;
+        width: 390px;
+        height: 390px;
     }
 
     .about{
-        font-size: 73px;
-        width: 550px;
-        display: block;
-        float: none;
+        font-size: 47px;
+        width: 360px;
+        height: auto;
     }
 
     .car1-img{
-        width: 600px;
-        height: 600px;
-        display: block;
-        float: none;
+        width: 390px;
+        height: 390px;
     }
 
     .about1{
-        font-size: 73px;
-        width: 550px;
-        display: block;
-        float: none;
+        font-size: 47px;
+        width: 360px;
+        height: auto;
     }
 
     .block2{
-        height: 0;
+        height: 410px;
+    }
+
+    .carshipment img{
+        width: 730px;
+        padding: 100px 0;
     }
 
     .info{
         font-size: 55px;
     }
 
+    .title_press{
+        font-size: 60px;
+    }
+
     .news_text{
-        width: 750px;
-        font-size: 35px;
-        display: block;
+        width: 500px;
+        font-size: 22px;
     }
 
     .picture{
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: 3px !important; 
+        left: auto;  
+        --swiper-navigation-size: 25px;
+    }
+    
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 3px !important; 
+        right: auto;
+        --swiper-navigation-size: 25px;
+    }
+}
+
+@media (max-width: 420px){
+    .container{
+        max-width: 370px;
+    }
+
+    .menu_line{
+        font-size: 30px;
+        padding: 20px 20px;
+    }
+
+    .logo{
+        padding-left: 30% ;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .block1{
+        padding-bottom: 50px;
+    }
+
+    .car-img{
+        width: 100%;
+        height: auto;
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .about{
+        font-size: 40px;
+        width: 100%;
+        height: auto;
+        display: block;
+        float: none;
+        margin: 0 auto;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .car1-img{
+        width: 100%;
+        height: auto;
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .about1{
+        font-size: 40px;
+        width: 100%;
+        height: auto;
+        display: block;
+        float: none;
+        margin: 0 auto;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .block2{
+        height: auto;
+    }
+
+    .all_models{
+        width: 370px;
+        height: 65px;
+    }
+
+    .all_border{
+        width: 100%;
+        height: 100%;
+    }
+
+    .all-text{
+        font-size: 30px;
+        padding-top: 13px;
+    }
+
+    .carshipment img{
+        width: 350px;
+        padding: 60px 0;
+    }
+
+    .info{
+        font-size: 33px;
+    }
+
+    .title_press{
+        font-size: 35px;
+    }
+
+    .news_text{
+        width: 100%;
+        font-size: 20px;
+        display: block;
+        float: none;
+        padding: 0;
+    }
+
+    .picture{
+        width: 370px;
+        height: 370px;
         display: block;
     }
 
     .swiper-button-next, .swiper-rtl .swiper-button-prev{
-        right: 7px !important; 
+        right: 5px !important; 
         left: auto;  
     }
     
     .swiper-button-prev, .swiper-rtl .swiper-button-next{
-        left: 7px !important; 
+        left: 5px !important; 
         right: auto;
     }
 }
