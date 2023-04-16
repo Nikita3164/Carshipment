@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-color: #242424;
+    background-color: black;
 }
 
 .container{
@@ -24,6 +24,7 @@ body {
 
 .menu img, .phone img{
     width: 50px;
+    transition: 0.3s;
 }
 
 .logo img{
@@ -44,7 +45,7 @@ body {
     background-color: rgba(255, 255, 255, 0.88);
     /*min-width: 1100px;*/
     z-index: 2;
-    margin-top: 6px;
+    margin-top: 5px;
     margin-left: -50px;
 }
 
@@ -66,6 +67,12 @@ body {
 
 .menu:hover img{
     filter: invert(0.5);
+    cursor: pointer;
+}
+
+.phone:hover img{
+    filter: invert(0.5);
+    cursor: pointer;
 }
 
 .menu_content .menu_line:hover{
@@ -90,25 +97,36 @@ body {
 }
 
 .more{
-    padding-right: 6%;
-    padding-top: 22%;
+    padding-top: 24%;
+    padding-right: 3%;
     right: 0;
     position: absolute;
 }
 
 .more-border{
-    border: 2px solid white;
+    border: 2px solid #cdcdcd;
     border-radius: 7px;
     width: 345px;
     height: 85px;
+    transition: 0.3s;
 }
 
 .more-text{
-    color: white;
+    color: #cdcdcd;
     font-family: 'Montserrat', sans-serif;
     font-size: 42px;
     text-align: center;
-    padding-top: 15px;  
+    padding-top: 15px; 
+    transition: 0.3s; 
+}
+
+.more-border:hover{
+    border-color: white;
+    cursor: pointer; 
+}
+
+.more-border:hover .more-text{
+    color: white; 
 }
 
 .text{
@@ -117,22 +135,21 @@ body {
     font-size: 88px;
     position: absolute;
     right: 0;
-    padding-right: 6%;
-    padding-top: 7%;
+    padding-top: 12%;
+    padding-right: 3%;
+    text-align: right;
+    width: 700px;
 }
 
-.t2{
-    padding-top: 70px;
-}
-
-.t3{
-    padding-top: 140px;
+#sales{
+    padding-top: 6%;
 }
 
 /*Модели*/
 
 .models{
-    background-color: #242424;
+    background: rgb(36,36,36);
+    background: linear-gradient(180deg, rgba(36,36,36,1) 39%, rgba(0,0,0,1) 100%);
 }
 
 h1 {
@@ -319,18 +336,29 @@ h1.visible {
 }
 
 .all_border{
-    border: 2px solid white;
+    border: 2px solid #cdcdcd;
     border-radius: 7px;
     width: 510px;
     height: 110px;
+    transition: 0.3s;
 }
 
 .all-text{
-    color: white;
+    color: #cdcdcd;
     font-family: 'Montserrat', sans-serif;
     font-size: 42px;
     text-align: center;
-    padding-top: 30px;  
+    padding-top: 30px;
+    transition: 0.3s;  
+}
+
+.all_models:hover .all_border{
+    border-color: white;
+    cursor: pointer;
+}
+
+.all_models:hover .all-text{
+    color: white;
 }
 
 /*Раздел с текстом*/
@@ -432,6 +460,10 @@ h1.visible {
         max-width: 1400px;
     }
 
+    .more{
+        padding-top: 25%;
+    }
+
     .car-img{
         width: 700px;
         height: 700px;
@@ -474,6 +506,15 @@ h1.visible {
 @media (max-width: 1500px){
     .container{
         max-width: 1200px;
+    }
+
+    .text{
+        font-size: 73px;
+        width: 680px;
+    }
+
+    .more{
+        padding-top: 26%;
     }
 
     .car-img{
@@ -528,6 +569,25 @@ h1.visible {
 @media (max-width: 960px){
     .container{
         max-width: 780px;
+    }
+
+    .text{
+        font-size: 48px;
+        width: 380px;
+    }
+
+    .more{
+        padding-top: 28%;
+    }
+
+    .more-border{
+        width: 252px;
+        height: 58px;
+    }
+
+    .more-text{
+        font-size: 30px;
+        padding-top: 7px;
     }
 
     .car-img{
@@ -597,13 +657,45 @@ h1.visible {
         max-width: 370px;
     }
 
+    .header{
+        height: 50px;
+    }
+
+    .menu{
+        margin-top: 6px;
+        margin-left: 14px;
+        margin-bottom: 6px;
+    }
+
+    .phone{
+        padding-top: 6px;
+        padding-right: 14px;
+    }
+
+    .menu img, .phone img {
+        width: 34px;
+    }
+
+    .menu_content{
+        margin-left: -14px;
+    }
+
     .menu_line{
         font-size: 30px;
         padding: 20px 20px;
     }
 
     .logo{
-        padding-left: 30% ;
+        padding-top: 4;
+        padding-left: 36% ;
+    }
+
+    .logo img{
+        width: 130px;
+    }
+
+    .promotion img{
+        width: 120%;
     }
 
     h1{
