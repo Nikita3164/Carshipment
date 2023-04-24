@@ -47,21 +47,14 @@
     </div>
 
     <div class="models">
-        <div class="container">
-            <h1>МОДЕЛИ АВТОПАРКА</h1>
-                <div class="block1">
-                    <div class="car-img"><img src="static/img/car1.png"><div class="line"><div class="line-text">Перейти ></div></div></div>
-                    <div class="about">Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit, sed do eius</div>
-                </div>
-                <div class="block2">
-                    <div class="car1-img"><img src="static/img/car2.png"><div class="line"><div class="line-text">Перейти ></div></div></div>
-                    <div class="about1">Lorem ipsum dolor sit amet, 
-                        consectetur adipiscing elit, sed do eius</div> 
-                    
-                </div>     
-            <div class="all_models"><div class="all_border"><div class="all-text">Все модели</div></div></div>
-        </div>
+        <h1>МОДЕЛИ АВТОПАРКА</h1>
+        <div class="car-img"><img src="static/img/car1.png"><div class="line"><div class="line-text">Перейти ></div></div>
+        </div><div class="about">Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eius</div>
+        <div id="c1" class="car-img"><img src="static/img/car2.png"><div class="line"><div class="line-text">Перейти ></div></div>
+        </div><div id="a1" class="about">Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, sed do eius</div>        
+        <div class="all_models"><div class="all_border"><div class="all-text">Все модели</div></div></div>
     </div>    
 
     <div class="fon">
@@ -82,10 +75,14 @@
                     <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="news">
-                            <div class="picture"></div>
-                            <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            na</div>
+                            <div class="picture">
+                            </div><div class="content">
+                                <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                na</div>
+                                <div class="date">central office · 01/05/2023 </div>
+                                <div class="share"><img src="static/img/share.png"></div>
+                            </div>    
                         </div>   
                     </div>
                     <div class="swiper-slide">
@@ -107,9 +104,35 @@
     </div>
 
     <div class="footer">
+        <div class="container">
+            <div class="title_navigation">Навигация</div>
+            <div class="foot_logo"><img src="static/img/logo.png"></div>
+            <div class="group1">
+                <a href="#"><div class="foot_ref">Автомобили</div></a>
+                <a href="#"><div class="foot_ref">Услуги</div></a>
+                <a href="#"><div class="foot_ref">Сотрудничество</div></a>
+                <a href="#"><div class="foot_ref">Классификация авто</div></a>
+            </div>
+            <div class="group2">
+                <a href="#"><div class="foot_ref">Инвесторам</div></a>
+                <a href="#"><div class="foot_ref">FAQ</div></a>
+                <a href="#"><div class="foot_ref">Оферта</div></a>
+                <a href="#"><div class="foot_ref">Контакты</div></a>
+            </div>
+            <div class="mailing">
+                <div class="mail_title">Новостная рассылка</div>
+                <input type="email" placeholder="email">
+                <div class="sn">
+                    <div class="sn-logo"><img src="static/img/tg.png"></div>
+                    <div class="sn-logo"><img src="static/img/yt.png"></div>
+                    <div class="sn-logo"><img src="static/img/vk.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="number">8 (996) 979 45 03</div>
+        <div class="email">По коммеческим вопросам: <i>email@email.com</i></div>
         <div class="copyright">
-            © 2023 carshipment.ru - новый способ приобретения автомобилей. 
-            Копирование материалов запрещено.
+            © 2023 carshipment.ru. Копирование материалов запрещено.
         </div>
     </div> 
     <script type="text/javascript" src="/static/js/main.js"></script>

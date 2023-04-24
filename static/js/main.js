@@ -43,7 +43,7 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-    var element = document.querySelector('.car1-img');
+    var element = document.querySelector('#c1');
     var position = element.getBoundingClientRect().top;
     var screenPosition = window.innerHeight / 2;
 
@@ -63,7 +63,7 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-    var element = document.querySelector('.about1');
+    var element = document.querySelector('#a1');
     var position = element.getBoundingClientRect().top;
     var screenPosition = window.innerHeight / 2;
 
@@ -75,17 +75,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     var element = document.querySelector('.all_models');
     var position = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight / 2;
-
-    if (position < screenPosition) {
-        element.classList.add('visible');
-    }
-});
-
-window.addEventListener('scroll', function() {
-    var element = document.querySelector('.carshipment');
-    var position = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight / 2;
+    var screenPosition = window.innerHeight / 1.5;
 
     if (position < screenPosition) {
         element.classList.add('visible');

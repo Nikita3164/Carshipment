@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
+
 body {
     margin: 0;
     background-color: black;
@@ -93,7 +94,8 @@ body {
 /*Раздел с продажами*/
 
 .promotion img{
-    width: 100%;   
+    width: 100%; 
+    display: block;  
 }
 
 .more{
@@ -113,7 +115,7 @@ body {
 
 .more-text{
     color: #cdcdcd;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', '17400', sans-serif;
     font-size: 42px;
     text-align: center;
     padding-top: 15px; 
@@ -143,139 +145,6 @@ body {
 
 #sales{
     padding-top: 6%;
-}
-
-/*Модели*/
-
-.models{
-    background: rgb(36,36,36);
-    background: linear-gradient(180deg, rgba(36,36,36,1) 39%, rgba(0,0,0,1) 100%);
-}
-
-h1 {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-    color: white;
-    opacity: 0;
-    transform: translate(-50%, 0);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-h1.visible {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.car-img{
-    width: 765px;
-    height: 765px;
-    background-color: black;
-    display: inline-block;
-    position: relative;
-    opacity: 0;
-    transform: translate(0, 40%);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.car-img.visible {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.car-img img{
-    width: 100%;
-}
-
-.line{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
-    background-color: rgba(55, 55, 55, 0.85);
-    transition: 0.5s;
-}
-
-.line:hover{
-    background-color: rgba(55, 55, 55, 1);
-    cursor: pointer;
-}
-
-.line-text{
-    position: absolute;
-    right: 10px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 34px;
-    padding-top: 10px;
-}
-
-.about{
-    font-family: 'Montserrat', sans-serif;
-    width: 788px;
-    height: 602px;
-    color: white;
-    font-size: 100px;
-    float: right;
-    display: inline-block;
-    text-align: right;
-    opacity: 0;
-    transform: translate(0, 30%);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.about.visible {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.block1{
-    padding-bottom: 80px;
-}
-
-.block2{
-    height: 765px;
-}
-
-.car1-img{
-    width: 765px;
-    height: 765px;
-    background-color: black;
-    display: inline-block;
-    position: relative;
-    float: right;
-    opacity: 0;
-    transform: translate(0, 40%);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.car1-img.visible {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.car1-img img{
-    width: 100%;
-}
-
-.about1{
-    font-family: 'Montserrat', sans-serif;
-    width: 788px;
-    height: 602px;
-    color: white;
-    font-size: 100px;
-    display: inline-block;
-    opacity: 0;
-    transform: translate(0, 30%);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.about1.visible {
-    opacity: 1;
-    transform: translate(0, 0);
 }
 
 /*Слайдер*/
@@ -321,34 +190,132 @@ h1.visible {
     --swiper-theme-color: white; 
 }
 
+/*Модели*/
+
+.models{
+    background: rgb(36,36,36);
+    background: linear-gradient(180deg, rgba(36,36,36,1) 39%, rgba(0,0,0,1) 100%);
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+h1.visible {
+    opacity: 1;
+}
+
+.car-img{
+    width: 50%;
+    background-color: black;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(0, 40%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.car-img.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.car-img img{
+    width: 100%;
+    display: block;
+}
+
+.car-img:hover img{
+    transition: 7s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.line{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(55, 55, 55, 0.85);
+    transition: 0.5s;
+}
+
+.car-img:hover .line{
+    background-color: rgba(55, 55, 55, 1);
+    cursor: pointer;
+}
+
+.line-text{
+    position: absolute;
+    right: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    padding-top: 10px;
+}
+
+.about{
+    font-family: 'Montserrat', sans-serif;
+    width: 44%;
+    padding: 0 3%;
+    padding-top: 5%;
+    color: white;
+    font-size: 100px;
+    vertical-align: top;
+    display: inline-block;
+    opacity: 0;
+    transform: translate(0, 30%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.about.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+#c1{
+    margin-top: -4px;
+}
+#a1{
+    margin-top: -4px;
+    float: left;
+}
+
 .all_models{
     margin: 50px auto;
-    width: 510px;
-    height: 110px;
+    width: 630px;
+    height: 100px;
     opacity: 0;
-    transform: translate(-50%, 0);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: 0.6s;
 }
 
 .all_models.visible{
     opacity: 1;
-    transform: translate(0, 0);
 }
 
 .all_border{
     border: 2px solid #cdcdcd;
     border-radius: 7px;
-    width: 510px;
-    height: 110px;
+    width: 630px;
+    height: 100px;
     transition: 0.3s;
 }
 
 .all-text{
     color: #cdcdcd;
     font-family: 'Montserrat', sans-serif;
-    font-size: 42px;
+    font-size: 41px;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 23px;
     transition: 0.3s;  
 }
 
@@ -366,19 +333,11 @@ h1.visible {
 .carshipment{
     background-color: white;
     padding-bottom: 30px;
-    opacity: 0;
-    transform: translate(-50%, 0);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-
-.carshipment.visible {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
 
 .carshipment img{
     width: 891px;
-    padding: 140px 0;
+    padding: 70px 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -410,7 +369,7 @@ h1.visible {
 
 .title_press{
     font-family: 'Montserrat', sans-serif;
-    font-size: 100px;
+    font-size: 80px;
     padding: 15px 0; 
 }
 
@@ -427,13 +386,41 @@ h1.visible {
     display: inline-block;
 }
 
+.content{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 440px);
+}
+
 .news_text{
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
-    padding-right: 50px;
-    display: inline-block;
-    width: 1113px;
+    width: 98%;
+    vertical-align: top;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.date{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    position: absolute;
+    bottom: 0;
+}
+
+.share{
     float: right;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.share img{
+    width: 45px;
 }
 
 .swiper-pagination3{
@@ -446,13 +433,118 @@ h1.visible {
     background-color: black;
 }
 
-.copyright{
-    font-family: 'Times New Roman', Times, serif;
+.title_navigation{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    width: 80%;
+    display: inline-block;
+    color: #cdcdcd;
+    margin: 0;
+    padding: 50px 0;
+}
+
+.group1, .group2{
+    display: inline-block;
+}
+
+.group1{
+    padding-right: 5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.foot_ref{
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
-    color: grey;
+    padding-bottom: 10px;
+    color: #cdcdcd;
+    transition: 0.2s;
+}
+
+.foot_ref:hover{
+    color: white;
+}
+
+.foot_logo{
+    width: 12%;
+    float: right;
+    padding-top: 60px;
+}
+
+.foot_logo img{
+    width: 100%;
+    filter: invert();
+}
+
+.mailing{
+    float: right;
+    padding-top: 20px;
+}
+
+.mail_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    padding: 10px 0;
+    color: #cdcdcd;
+}
+
+.mail-border{
+    width: 500px;
+    height: 40px;
+    border: 2px solid #cdcdcd;
+    border-radius: 7px;
+}
+
+.footer input{
+    width: 500px;
+    height: 50px;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    border: 2px solid #cdcdcd;
+}
+
+.sn{
+    padding-left: 160px;
+}
+
+.sn-logo{
+    display: inline-block;
+    padding: 10px;
+}
+
+.sn-logo img{
+    width: 45px;
+    filter: invert();
+}
+
+.number{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: #cdcdcd;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 90px;
+    padding-bottom: 10px;
+}
+
+.email{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #cdcdcd;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.copyright{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #cdcdcd;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 @media (max-width: 1652px){
@@ -464,28 +556,8 @@ h1.visible {
         padding-top: 25%;
     }
 
-    .car-img{
-        width: 700px;
-        height: 700px;
-    }
-
     .about{
         font-size: 85px;
-        width: 650px;
-    }
-
-    .car1-img{
-        width: 700px;
-        height: 700px;
-    }
-
-    .about1{
-        font-size: 85px;
-        width: 650px;
-    }
-
-    .block2{
-        height: 700px;
     }
 
     .info{
@@ -517,28 +589,8 @@ h1.visible {
         padding-top: 26%;
     }
 
-    .car-img{
-        width: 600px;
-        height: 600px;
-    }
-
     .about{
         font-size: 73px;
-        width: 550px;
-    }
-
-    .car1-img{
-        width: 600px;
-        height: 600px;
-    }
-
-    .about1{
-        font-size: 73px;
-        width: 550px;
-    }
-
-    .block2{
-        height: 600px;
     }
 
     .info{
@@ -590,30 +642,8 @@ h1.visible {
         padding-top: 7px;
     }
 
-    .car-img{
-        width: 390px;
-        height: 390px;
-    }
-
     .about{
         font-size: 47px;
-        width: 360px;
-        height: auto;
-    }
-
-    .car1-img{
-        width: 390px;
-        height: 390px;
-    }
-
-    .about1{
-        font-size: 47px;
-        width: 360px;
-        height: auto;
-    }
-
-    .block2{
-        height: 410px;
     }
 
     .carshipment img{
@@ -721,31 +751,14 @@ h1.visible {
         display: block;
         float: none;
         margin: 0 auto;
-        padding-top: 20px;
+        padding: 20px 0;
         text-align: center;
     }
 
-    .car1-img{
-        width: 100%;
-        height: auto;
-        display: block;
+    #c1, #a1{
+        margin: 0;
         float: none;
-        margin: 0 auto;
-    }
-
-    .about1{
-        font-size: 40px;
-        width: 100%;
-        height: auto;
-        display: block;
-        float: none;
-        margin: 0 auto;
-        padding-top: 20px;
-        text-align: center;
-    }
-
-    .block2{
-        height: auto;
+        padding-bottom: 0;
     }
 
     .all_models{
@@ -777,11 +790,12 @@ h1.visible {
     }
 
     .news_text{
-        width: 100%;
+        width: 90%;
         font-size: 20px;
         display: block;
         float: none;
-        padding: 0;
+        padding: 0 5%;
+        padding-top: 5%;
     }
 
     .picture{
