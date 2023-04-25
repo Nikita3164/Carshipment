@@ -14,10 +14,17 @@ body {
 /*Хэдер*/
 
 .header {
+    position: sticky;
+    top: 0;
     height: 70px;
     background-color: white;
-    
+    z-index: 2;
+    transition: 0.5s;  
 }
+
+.header_hidden {
+    transform: translateY(-100%);
+  }
 
 .menu, .logo, .phone{
     display: inline-block;
@@ -64,6 +71,7 @@ body {
 
 .menu:hover .menu_content{
     display: block;
+    opacity: 1;
 }
 
 .menu:hover img{
@@ -569,8 +577,11 @@ a{
         font-size: 60px;
     }
 
-    .news_text{
+    .news{
         height: 370px;
+    }
+
+    .news_text{
         font-size: 40px;
     }
 
@@ -579,8 +590,12 @@ a{
         height: 370px;
     }
 
+    .picture img{
+        width: 370px;
+    }
+
     .content{
-        c
+        width: calc(100% - 370px)
     }
 }
 
@@ -606,14 +621,33 @@ a{
         font-size: 55px;
     }
 
+    .news{
+        height: 300px;
+    }
+
     .news_text{
-        width: 840px;
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .picture{
         width: 300px;
         height: 300px;
+    }
+
+    .picture img{
+        width: 300px;
+    }
+
+    .content{
+        width: calc(100% - 300px)
+    }
+
+    .date{
+        font-size: 25px;
+    }
+
+    .share img{
+        width: 35px;
     }
 
     .swiper-button-next, .swiper-rtl .swiper-button-prev{
@@ -624,6 +658,10 @@ a{
     .swiper-button-prev, .swiper-rtl .swiper-button-next{
         left: 7px !important; 
         right: auto;
+    }
+
+    .foot_ref{
+        font-size: 30px;
     }
 }
 
@@ -668,8 +706,11 @@ a{
         font-size: 60px;
     }
 
+    .news{
+        height: 200px;
+    }
+
     .news_text{
-        width: 500px;
         font-size: 22px;
     }
 
@@ -677,6 +718,16 @@ a{
         width: 200px;
         height: 200px;
     }
+
+    .picture img{
+        width: 200px;
+    }
+
+    .content{
+        width: calc(100% - 200px)
+    }
+
+    
 
     .swiper-button-next, .swiper-rtl .swiper-button-prev{
         right: 3px !important; 
