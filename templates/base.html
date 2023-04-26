@@ -8,6 +8,7 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link rel="shortcut icon" href="static/img/icon.png" type="image/png">
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <title>Carshipment</title>
 </head>
@@ -48,10 +49,10 @@
 
     <div class="models">
         <h1>МОДЕЛИ АВТОПАРКА</h1>
-        <div class="car-img"><img src="static/img/car1.png"><div class="line"><div class="line-text">Перейти ></div></div>
+        <div class="car-img"><img src="static/img/car1.png"><div class="line"><div class="line-text">Перейти</div><img src="static/img/pointer.png"></div>
         </div><div class="about">Lorem ipsum dolor sit amet, 
                 consectetur adipiscing elit, sed do eius</div>
-        <div id="c1" class="car-img"><img src="static/img/car2.png"><div class="line"><div class="line-text">Перейти ></div></div>
+        <div id="c1" class="car-img"><img src="static/img/car2.png"><div class="line"><div class="line-text">Перейти</div><img src="static/img/pointer.png"></div>
         </div><div id="a1" class="about">Lorem ipsum dolor sit amet, 
             consectetur adipiscing elit, sed do eius</div>        
         <div class="all_models"><div class="all_border"><div class="all-text">Все модели</div></div></div>
@@ -107,9 +108,8 @@
     </div>
 
     <div class="footer">
-        <div class="container">
+        <div id="foot" class="container">
             <div class="title_navigation">Навигация</div>
-            <div class="foot_logo"><img src="static/img/logo.png"></div>
             <div class="group1">
                 <a href="#"><div class="foot_ref">Автомобили</div></a>
                 <a href="#"><div class="foot_ref">Услуги</div></a>
@@ -122,9 +122,11 @@
                 <a href="#"><div class="foot_ref">Оферта</div></a>
                 <a href="#"><div class="foot_ref">Контакты</div></a>
             </div>
+            <div class="foot_logo"><img src="static/img/logo.png"></div>
             <div class="mailing">
                 <div class="mail_title">Новостная рассылка</div>
                 <input type="email" placeholder="email">
+                <img id="point_foot" src="static/img/pointer.png">
                 <div class="sn">
                     <div class="sn-logo"><img src="static/img/tg.png"></div>
                     <div class="sn-logo"><img src="static/img/yt.png"></div>
