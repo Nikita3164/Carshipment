@@ -1,18 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: antiquewhite;
+    background-color: white;
 }
 
-.video{
-    background: url("/static/img/cars.png");
-    background-position: center center;
+video{
     min-width: 100%;
     height: calc(100vh - 70px);
-    background-size: cover;
 }
 
 .classification{
@@ -20,22 +19,24 @@ body{
 }
 
 th{
-    border: 2px solid white;
+    border: 2.5px solid white;
     background-color: black;
-    height: 100px;
+    height: 80px;
     color: white;
  }
  /* границы ячеек тела таблицы */
  td{
-    background-color: gray;
-    height: 100px;
-    border: 2px solid white;
+    background-color: #dcdcdc;
+    height: 80px;
+    border: 2.5px solid white;
  }
 
  table{
+    font-family: "Montserrar", sans-serif;
+    font-size: 18px;
+    text-align: center;
     padding: 50px 0;
     width: 100%;
     border-collapse: collapse;
-    border: 3px solid antiquewhite;
 
  }

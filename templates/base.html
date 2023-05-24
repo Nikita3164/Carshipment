@@ -33,17 +33,21 @@
     <div class="promotion">
         <div class="swiper promoSwiper">
             <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div id="sales" class="text">Обращение по продвижению</div>
-                <div class="more"><div class="more-border"><div class="more-text">Подробнее</div></div></div>   
-                <img src="static/img/keys.png">  
+                <div class="swiper-slide">
+                    <div id="sales" class="text">Обращение по продвижению</div>
+                    <div class="more"><div class="more-border"><div class="more-text">Подробнее</div></div></div>   
+                    <img id="keys" src="static/img/keys.png">  
+                </div>
+                <div class="swiper-slide">   
+                    <div class="text">Классификация автомобилей</div>
+                    <a href="/classification"><div class="more"><div class="more-border"><div class="more-text">Подробнее</div></div></div></a>
+                    <img id="cars" src="static/img/cars.png"> 
+                </div>
+                
             </div>
-            <div class="swiper-slide">   
-                <div class="text">Классификация автомобилей</div>
-                <div class="more"><div class="more-border"><div class="more-text">Подробнее</div></div></div>
-                <img src="static/img/cars.png"> 
-            </div>
-            </div>  
+            <div id="promo_pagination" class="swiper-pagination swiper-pagination3"></div>
+            <div id="promo_button_next" class="swiper-button-next"></div>
+            <div id="promo_button_prev" class="swiper-button-prev"></div> 
         </div>
     </div>
 
@@ -74,30 +78,30 @@
                 <div class="title_press">Пресс-релизы</div>
                 <div class="swiper newsSwiper">
                     <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="news">
-                            <div class="picture"><img src="static/img/Moscow.png">
-                            </div><div class="content">
-                                <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                na</div>
-                                <div class="date">Moscow · 01/05/2023 </div>
-                                <div class="share"><img src="static/img/share.png"></div>
-                            </div>    
-                        </div>   
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news">
-                            <div class="picture"><img src="static/img/Petersburg.png">
-                            </div><div class="content">
-                                <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                                     laboris nisi ut aliquip ex ea commodo consequat.</div>
-                                <div class="date">Saint-Petersburg · 01/05/2023 </div>      
-                                <div class="share"><img src="static/img/share.png"></div>
-                            </div>
-                        </div>  
-                    </div>
+                        <div class="swiper-slide">
+                            <div class="news">
+                                <div class="picture"><img src="static/img/Moscow.png">
+                                </div><div class="content">
+                                    <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    na</div>
+                                    <div class="date">Moscow · 01/05/2023 </div>
+                                    <div class="share"><img src="static/img/share.png"></div>
+                                </div>    
+                            </div>   
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news">
+                                <div class="picture"><img src="static/img/Petersburg.png">
+                                </div><div class="content">
+                                    <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                                        laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                    <div class="date">Saint-Petersburg · 01/05/2023 </div>      
+                                    <div class="share"><img src="static/img/share.png"></div>
+                                </div>
+                            </div>  
+                        </div>
                     </div>  
                     <div class="swiper-pagination swiper-pagination3"></div>
                 </div>
@@ -109,6 +113,7 @@
 
     <footer class="footer">
         <div id="foot" class="container">
+            <div class="foot_logo"><img src="static/img/logo.png"></div>
             <div class="title_navigation">Навигация</div>
             <div class="group1">
                 <a href="#"><div class="foot_ref">Автомобили</div></a>
@@ -122,7 +127,6 @@
                 <a href="#"><div class="foot_ref">Оферта</div></a>
                 <a href="#"><div class="foot_ref">Контакты</div></a>
             </div>
-            <div class="foot_logo"><img src="static/img/logo.png"></div>
             <div class="mailing">
                 <div class="mail_title">Новостная рассылка</div>
                 <input type="email" placeholder="email">

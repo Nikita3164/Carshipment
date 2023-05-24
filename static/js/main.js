@@ -1,11 +1,19 @@
   var autoSwiper = new Swiper(".promoSwiper", {
     spaceBetween: 30,
-    keyboard: true,
-    loop: true,
-    autoplay: {
-        delay: 4000,
-        pauseOnMouseEnter: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
+    pagination: {
+        el: ".swiper-pagination3",
+        clickable: true,
+    },
+    keyboard: true,
+    //loop: true,
+    //autoplay: {
+    //    delay: 4000,
+    //    pauseOnMouseEnter: true,
+    //},
 });
 
 var newsSwiper = new Swiper(".newsSwiper", {

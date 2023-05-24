@@ -43,7 +43,6 @@ body {
     width: 174px;
 }
 
-
 .menu{
     position: absolute;
     margin-top: 10px;
@@ -108,6 +107,30 @@ body {
 .promotion img{
     width: 100%; 
     display: block;  
+}
+
+#promo_pagination{
+    --swiper-pagination-bullet-inactive-color: grey;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+    --swiper-theme-color: white;
+    position: absolute !important;
+    bottom: 25px;
+}
+
+#promo_button_next, #promo_button_prev{
+    --swiper-navigation-size: 30px;
+    --swiper-theme-color: white;
+    bottom: 30px;
+    top: auto/*563px;*/
+}
+
+#promo_button_next{
+    right: 880px !important;
+}
+
+#promo_button_prev{
+    left: 880px !important;
 }
 
 .more{
@@ -655,6 +678,14 @@ a{
         width: 680px;
     }
 
+    #promo_button_next{
+        right: 490px !important;
+    }
+
+    #promo_button_prev{
+        left: 490px !important;
+    }
+
     .more{
         padding-top: 26%;
     }
@@ -719,6 +750,14 @@ a{
     .text{
         font-size: 48px;
         width: 380px;
+    }
+
+    #promo_button_next{
+        right: 370px !important;
+    }
+
+    #promo_button_prev{
+        left: 370px !important;
     }
 
     .more{
@@ -878,8 +917,35 @@ a{
         width: 105px;
     }
 
-    .promotion img{
-        content: url("/static/img/mobile_fon.png");
+    #keys{
+        content: url("/static/img/keys_mobile.png");
+    }
+
+    #cars{
+        content: url("/static/img/cars_mobile.png");
+    }
+
+    .text{
+        font-size: 50px;
+        width: 380px;
+        top: auto;
+        bottom: 180px;
+        text-align: center;
+    }
+
+    .more{
+        padding: 0;
+        left: 85px;
+        top: auto;
+        bottom: 95px;
+    }
+
+    #promo_button_next{
+        right: 150px !important;
+    }
+
+    #promo_button_prev{
+        left: 150px !important;
     }
 
     h1{
@@ -998,13 +1064,13 @@ a{
     .title_navigation{
         width: 100%;
         text-align: center;
-        padding-top: 28px;
-        padding-bottom: 53px;
+        padding-top: 50px;
+        padding-bottom: 35px;
     }
 
     .foot_logo{
         width: 39%;
-        padding-top: 66px;
+        padding-top: 70px;
         padding-left: 117px;
     }
 
@@ -1019,7 +1085,7 @@ a{
     }
 
     .mailing{
-        padding-top: 66px;
+        padding-top: 40px;
         padding-left: 0;
         float: none;
     }
@@ -1033,7 +1099,7 @@ a{
     }
 
     #point_foot{
-        top: 132px;
+        top: 108px;
         right: 9px;
     }
 
