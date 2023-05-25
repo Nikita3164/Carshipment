@@ -93,7 +93,7 @@ body {
 
 .logo{
     padding-top: 5px;
-    padding-left: 43%;
+    padding-left: calc(50% - 87.5px)
 }
 
 .phone{

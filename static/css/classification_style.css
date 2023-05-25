@@ -9,9 +9,17 @@ body{
     background-color: white;
 }
 
+.header{
+    width: 100%;
+    position: fixed !important;
+}
+
 video{
-    min-width: 100%;
-    height: calc(100vh - 70px);
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;/*calc(100vh - 70px);*/
+    object-fit: cover;
 }
 
 .classification{
