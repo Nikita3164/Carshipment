@@ -1,0 +1,1129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+*{
+    font-weight: 600;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.container{
+    max-width: 1652px;
+    margin: 0 auto;
+}
+
+/*Хэдер*/
+
+.header {
+    position: sticky;
+    top: 0;
+    height: 70px;
+    background-color: white;
+    z-index: 2;
+    transition: 0.5s;  
+}
+
+.header_hidden {
+    transform: translateY(-100%);
+  }
+
+.menu, .logo, .phone{
+    display: inline-block;
+}
+
+.menu img, .phone img{
+    width: 42px;
+    transition: 0.3s;
+}
+
+.logo img{
+    width: 156px;
+}
+
+.menu{
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 30px;
+    padding-bottom: 12px;
+}  
+
+.menu_content{
+    opacity: 0;
+    display: none;
+    position: fixed;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.88);
+    /*min-width: 1100px;*/
+    z-index: 2;
+    margin-top: 5px;
+    margin-left: -50px;
+}
+
+.menu_line{
+    font-size: 36px;
+    padding: 20px 78px;
+    transition: 0.2s;
+}
+
+.menu_content a{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.menu:hover .menu_content{
+    display: block;
+    opacity: 1;
+}
+
+.menu:hover img{
+    filter: invert(0.5);
+    cursor: pointer;
+}
+
+.phone:hover img{
+    filter: invert(0.5);
+    cursor: pointer;
+}
+
+.menu_content .menu_line:hover{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.logo{
+    padding-top: 8px;
+    padding-left: calc(50% - 78px)
+}
+
+.phone{
+    float: right;
+    padding-top: 12px;
+    padding-right: 30px;
+}
+
+/*Раздел с продажами*/
+
+.promotion img{
+    width: 100%; 
+    display: block;  
+}
+
+#promo_pagination{
+    --swiper-pagination-bullet-inactive-color: grey;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+    --swiper-theme-color: white;
+    position: absolute !important;
+    bottom: 25px;
+}
+
+#promo_button_next, #promo_button_prev{
+    --swiper-navigation-size: 30px;
+    --swiper-theme-color: white;
+    bottom: 30px;
+    top: auto/*563px;*/
+}
+
+#promo_button_next{
+    right: 880px !important;
+}
+
+#promo_button_prev{
+    left: 880px !important;
+}
+
+.more{
+    padding-top: 24%;
+    padding-right: 3%;
+    right: 0;
+    position: absolute;
+}
+
+.more-border{
+    border: 2px solid #cdcdcd;
+    border-radius: 7px;
+    width: 345px;
+    height: 85px;
+    transition: 0.3s;
+}
+
+.more-text{
+    color: #cdcdcd;
+    font-family: 'Montserrat', '17400', sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 15px; 
+    transition: 0.3s; 
+}
+
+.more-border:hover{
+    border-color: white;
+    cursor: pointer; 
+}
+
+.more-border:hover .more-text{
+    color: white; 
+}
+
+.text{
+    color: #e5b876;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 88px;
+    font-weight: normal;
+    position: absolute;
+    right: 0;
+    padding-top: 12%;
+    padding-right: 3%;
+    text-align: right;
+    width: 700px;
+}
+
+#sales{
+    padding-top: 6%;
+}
+
+/*Слайдер*/
+
+.swiper{
+    height: 100%;
+}
+
+.swiper-slide{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: 40px !important; 
+    left: auto;  
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: 40px !important; 
+    right: auto;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    --swiper-theme-color: black;
+}
+
+.swiper-pagination{
+    position: static !important;
+    --swiper-theme-color: black;
+}
+
+.swiper-pagination1{
+    margin: 8px 0;
+    --swiper-pagination-bullet-inactive-color: rgb(207, 196, 196);
+    --swiper-theme-color: white;
+    
+}
+
+#auto_sw{
+    --swiper-theme-color: white; 
+}
+
+/*Модели*/
+
+.models{
+    background: rgb(36,36,36);
+    background: linear-gradient(180deg, rgba(36,36,36,1) 39%, rgba(0,0,0,1) 100%);
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+h1.visible {
+    opacity: 1;
+}
+
+.car-img{
+    width: 50%;
+    background-color: black;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(0, 40%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.car-img.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.car-img img{
+    width: 100%;
+    display: block;
+}
+
+.car-img:hover img{
+    transition: 7s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.line{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(55, 55, 55, 0.85);
+    transition: 0.5s;
+}
+
+.car-img:hover .line{
+    background-color: rgba(55, 55, 55, 1);
+    cursor: pointer;
+}
+
+.car-img:hover .line img{
+    transform: translateX(8px);
+    transition: 0.5s;
+}
+
+.line-text{
+    position: absolute;
+    right: 82px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    padding-top: 10px;
+}
+
+.line img{
+    top: 20px;
+    right: 55px;
+    position: absolute;
+    width: 15px;
+    transition: 0.5s;
+}
+
+.about{
+    font-family: 'Montserrat', sans-serif;
+    width: 44%;
+    padding: 0 3%;
+    padding-top: 5%;
+    color: white;
+    font-size: 100px;
+    vertical-align: top;
+    display: inline-block;
+    opacity: 0;
+    transform: translate(0, 30%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.about.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+#c1{
+    margin-top: -4px;
+}
+#a1{
+    margin-top: -4px;
+    float: left;
+}
+
+.all_models{
+    margin: 50px auto;
+    width: 630px;
+    height: 100px;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.all_models.visible{
+    opacity: 1;
+}
+
+.all_border{
+    border: 2px solid #cdcdcd;
+    border-radius: 7px;
+    width: 630px;
+    height: 100px;
+    transition: 0.3s;
+}
+
+.all-text{
+    color: #cdcdcd;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 41px;
+    text-align: center;
+    padding-top: 23px;
+    transition: 0.3s;  
+}
+
+.all_models:hover .all_border{
+    border-color: white;
+    cursor: pointer;
+}
+
+.all_models:hover .all-text{
+    color: white;
+}
+
+/*Раздел с текстом*/
+
+.carshipment{
+    background-color: white;
+    padding-bottom: 30px;
+}
+
+.carshipment img{
+    width: 891px;
+    padding: 70px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    text-align: center;
+}
+
+/*Пресс-релизы*/
+.background{
+    background-color: white;
+}
+
+.press_realises{
+    background-color: white;
+    padding-bottom: 30px;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.press_realises.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+.title_press{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+    padding: 15px 0; 
+}
+
+.news{
+    width: 100%;
+    height: 440px;
+    background-color: #e2e2e2;
+}
+
+.picture{
+    width: 440px;
+    height: 440px;
+    background-color: black;
+    display: inline-block;
+}
+
+.picture img{
+    width: 440px;
+    display: block;
+}
+
+.content{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 440px);
+}
+
+.news_text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    width: 98%;
+    vertical-align: top;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.date{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    position: absolute;
+    bottom: 0;
+}
+
+.share{
+    float: right;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.share img{
+    width: 45px;
+}
+
+.swiper-pagination3{
+    margin: 10px 0;
+}
+
+/*Футер*/
+
+.footer{
+    background-color: black;
+}
+
+.title_navigation{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    width: 80%;
+    display: inline-block;
+    color: #cdcdcd;
+    margin: 0;
+    padding: 50px 0;
+}
+
+.group1, .group2{
+    display: inline-block;
+}
+
+.group1{
+    padding-right: 5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.foot_ref{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: #cdcdcd;
+    transition: 0.2s;
+}
+
+.foot_ref:hover{
+    color: white;
+}
+
+#foot{
+    position: relative;
+}
+
+.foot_logo{
+    width: 12%;
+    position: absolute;
+    top: 0;
+    right: 140px;
+    padding-top: 60px;
+}
+
+.foot_logo img{
+    width: 100%;
+    filter: invert();
+}
+
+.mailing{
+    float: right;
+    padding-top: 22px;
+    position: relative;
+}
+
+#point_foot{
+    position: absolute;
+    width: 18px;
+    top: 90px;
+    right: 12px;
+}
+
+#point_foot:hover{
+    cursor: pointer;
+}
+
+.mail_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0;
+    color: #cdcdcd;
+}
+
+.mail-border{
+    width: 500px;
+    height: 40px;
+    border: 2px solid #cdcdcd;
+    border-radius: 7px;
+}
+
+.footer input{
+    width: 500px;
+    height: 50px;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    border: 2px solid #cdcdcd;
+}
+
+.sn{
+    padding-left: 129px;
+}
+
+.sn-logo{
+    display: inline-block;
+    padding: 22px;
+}
+
+.sn-logo img{
+    width: 45px;
+    filter: invert();
+}
+
+.number{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    color: #cdcdcd;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 10px;
+}
+
+.email{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #cdcdcd;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.copyright{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #cdcdcd;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 1652px){
+    .container{
+        max-width: 1400px;
+    }
+
+    .more{
+        padding-top: 25%;
+    }
+
+    .about{
+        font-size: 85px;
+    }
+
+    .info{
+        font-size: 60px;
+    }
+
+    .news{
+        height: 370px;
+    }
+
+    .news_text{
+        font-size: 40px;
+    }
+
+    .picture{
+        width: 370px;
+        height: 370px;
+    }
+
+    .picture img{
+        width: 370px;
+    }
+
+    .content{
+        width: calc(100% - 370px)
+    }
+}
+
+@media (max-width: 1500px){
+    .container{
+        max-width: 1200px;
+    }
+
+    .text{
+        font-size: 73px;
+        width: 680px;
+    }
+
+    #promo_button_next{
+        right: 490px !important;
+    }
+
+    #promo_button_prev{
+        left: 490px !important;
+    }
+
+    .more{
+        padding-top: 26%;
+    }
+
+    .about{
+        font-size: 73px;
+    }
+
+    .info{
+        font-size: 55px;
+    }
+
+    .news{
+        height: 300px;
+    }
+
+    .news_text{
+        font-size: 30px;
+    }
+
+    .picture{
+        width: 300px;
+        height: 300px;
+    }
+
+    .picture img{
+        width: 300px;
+    }
+
+    .content{
+        width: calc(100% - 300px)
+    }
+
+    .date{
+        font-size: 25px;
+    }
+
+    .share img{
+        width: 35px;
+    }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: 7px !important; 
+        left: auto;  
+    }
+    
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 7px !important; 
+        right: auto;
+    }
+
+    .foot_ref{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 960px){
+    .container{
+        max-width: 780px;
+    }
+
+    .text{
+        font-size: 48px;
+        width: 380px;
+    }
+
+    #promo_button_next{
+        right: 370px !important;
+    }
+
+    #promo_button_prev{
+        left: 370px !important;
+    }
+
+    .more{
+        padding-top: 28%;
+    }
+
+    .more-border{
+        width: 252px;
+        height: 58px;
+    }
+
+    .more-text{
+        font-size: 30px;
+        padding-top: 7px;
+    }
+
+    .about{
+        font-size: 47px;
+    }
+
+    .carshipment img{
+        width: 730px;
+        padding: 100px 0;
+    }
+
+    .info{
+        font-size: 55px;
+    }
+
+    .title_press{
+        font-size: 45px;
+    }
+
+    .news{
+        height: 200px;
+    }
+
+    .news_text{
+        font-size: 22px;
+    }
+
+    .picture{
+        width: 200px;
+        height: 200px;
+    }
+
+    .picture img{
+        width: 200px;
+    }
+
+    .date{
+        font-size: 20px;
+    }
+
+    .share img{
+        width: 30px;
+    }
+
+    .content{
+        width: calc(100% - 200px)
+    }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: 2px !important; 
+        left: auto;  
+        --swiper-navigation-size: 25px;
+    }
+    
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 2px !important; 
+        right: auto;
+        --swiper-navigation-size: 25px;
+    }
+
+    .foot_logo{
+        width: 25%;
+        position: static;
+        padding-top: 45px;
+        padding-left: 320px;
+    }
+
+    .mailing{
+        padding-left: 100px;
+        float: none;
+    }
+
+    .mail_title{
+        padding: 10px 129px;
+    }
+
+    #point_foot{
+        right: 110px;
+    }
+
+    .footer input{
+        width: 573px;
+    }
+
+    .sn{
+        padding-left: 198px;
+    }
+
+    .number{
+        font-size: 38px;
+        padding-top: 30px;
+    }
+
+    .email{
+        font-size: 26px;
+        padding-bottom: 60px;
+    }
+
+    .copyright{
+       font-size: 20px; 
+    }
+}
+
+@media (max-width: 420px){
+    .container{
+        max-width: 370px;
+    }
+
+    .header{
+        height: 45px;
+    }
+
+    .menu{
+        margin-top: 6px;
+        margin-left: 14px;
+        margin-bottom: 6px;
+    }
+
+    .phone{
+        padding-top: 6px;
+        padding-right: 14px;
+    }
+
+    .menu img, .phone img {
+        width: 30px;
+    }
+
+    .menu_content{
+        margin-left: -14px;
+    }
+
+    .menu_line{
+        font-size: 30px;
+        padding: 20px 20px;
+    }
+
+    .logo{
+        padding-top: 4;
+        padding-left: 40% ;
+    }
+
+    .logo img{
+        width: 105px;
+    }
+
+    #keys{
+        content: url("/static/img/keys_mobile.png");
+    }
+
+    #cars{
+        content: url("/static/img/cars_mobile.png");
+    }
+
+    .text{
+        font-size: 50px;
+        width: 380px;
+        top: auto;
+        bottom: 180px;
+        text-align: center;
+    }
+
+    .more{
+        padding: 0;
+        left: 85px;
+        top: auto;
+        bottom: 95px;
+    }
+
+    #promo_button_next{
+        right: 150px !important;
+    }
+
+    #promo_button_prev{
+        left: 150px !important;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .block1{
+        padding-bottom: 50px;
+    }
+
+    .car-img{
+        width: 100%;
+        height: auto;
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .about{
+        font-size: 40px;
+        width: 100%;
+        height: auto;
+        display: block;
+        float: none;
+        margin: 0 auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    #c1, #a1{
+        margin: 0;
+        float: none;
+        padding-bottom: 0;
+    }
+
+    .all_models{
+        width: 370px;
+        height: 65px;
+    }
+
+    .all_border{
+        width: 100%;
+        height: 100%;
+    }
+
+    .all-text{
+        font-size: 30px;
+        padding-top: 13px;
+    }
+
+    .carshipment img{
+        width: 350px;
+        padding: 60px 0;
+    }
+
+    .info{
+        font-size: 33px;
+    }
+
+    .title_press{
+        font-size: 30px;
+    }
+
+    .news{
+        height: 680px;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .news_text{
+        width: 94%;
+        font-size: 23px;
+        display: block;
+        float: none;
+        padding: 0 3%;
+        padding-top: 3%;
+    }
+
+    .picture{
+        width: 370px;
+        height: 370px;
+        display: block;
+    }
+
+    .picture img{
+        width: 370px;
+    }
+
+    .date{
+        font-size: 18px;
+        padding-left: 3%;
+        padding-bottom: 3%;
+    }
+
+    .share{
+        padding-right: 3%;
+        padding-bottom: 3%;
+    }
+
+    .share img{
+        width: 25px;
+    }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: 2px !important; 
+        left: auto;  
+    }
+    
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 2px !important; 
+        right: auto;
+    }
+
+    .title_navigation{
+        width: 100%;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 35px;
+    }
+
+    .foot_logo{
+        width: 39%;
+        padding-top: 70px;
+        padding-left: 117px;
+    }
+
+    .group1, .group2{
+        display: block;
+        padding: 0;
+    }
+
+    .foot_ref{
+        text-align: center;
+        font-size: 31px;
+    }
+
+    .mailing{
+        padding-top: 40px;
+        padding-left: 0;
+        float: none;
+    }
+
+    .mail_title{
+        padding: 10px 17px;
+    }
+
+    .footer input{
+        width: 363px;
+    }
+
+    #point_foot{
+        top: 108px;
+        right: 9px;
+    }
+
+    .sn{
+        padding-left: 64px;
+    }
+
+    .sn-logo img{
+        width: 36px;
+    }
+
+    .number{
+        font-size: 33px;
+        padding-top: 20px;
+    }
+
+    .email{
+        font-size: 20px;
+        padding-bottom: 40px;
+    }
+
+    .copyright{
+       font-size: 16px; 
+    }
+}

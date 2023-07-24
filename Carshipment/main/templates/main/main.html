@@ -1,0 +1,90 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Carshipment{% endblock %}
+
+{% block content %}   
+    <div class="promotion">
+        <div class="swiper promoSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div id="sales" class="text">Обращение по продвижению</div>
+                    <div class="more"><div class="more-border"><div class="more-text">Подробнее</div></div></div>   
+                    <img id="keys" src="static/img/keys.png">  
+                </div>
+                <div class="swiper-slide">   
+                    <div class="text">Классификация автомобилей</div>
+                    <a href="/classification"><div class="more"><div class="more-border"><div class="more-text">Подробнее</div></div></div></a>
+                    <img id="cars" src="static/img/cars.png"> 
+                </div>
+            </div>
+            <div id="promo_pagination" class="swiper-pagination swiper-pagination3"></div>
+            <div id="promo_button_next" class="swiper-button-next"></div>
+            <div id="promo_button_prev" class="swiper-button-prev"></div> 
+        </div>
+    </div>
+
+    <div class="models">
+        <h1>МОДЕЛИ АВТОПАРКА</h1>
+        <div class="car-img"><img src="static/img/car1.png"><div class="line"><div class="line-text">Перейти</div><img src="static/img/pointer.png"></div>
+        </div><div class="about">Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eius</div>
+        <div id="c1" class="car-img"><img src="static/img/car2.png"><div class="line"><div class="line-text">Перейти</div><img src="static/img/pointer.png"></div>
+        </div><div id="a1" class="about">Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, sed do eius</div>        
+        <div class="all_models"><div class="all_border"><div class="all-text">Все модели</div></div></div>
+    </div>    
+
+    <div class="background">
+        <div class="carshipment">
+            <div class="container">
+                <img src="static/img/logo2.png">
+                <div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Quis ipsum suspendisse ultrices gravida. Risus commodo viverra 
+                            maecenas accumsan lacus vel facilisis.</div>   
+            </div>
+        </div>
+    
+        <div class="press_realises">
+            <div class="container">
+                <div class="title_press">Пресс-релизы</div>
+                <div class="swiper newsSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="news">
+                                <div class="picture"><img src="static/img/Moscow.png">
+                                </div><div class="content">
+                                    <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    na</div>
+                                    <div class="date">Moscow · 01/05/2023 </div>
+                                    <div class="share"><img src="static/img/share.png"></div>
+                                </div>    
+                            </div>   
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news">
+                                <div class="picture"><img src="static/img/Petersburg.png">
+                                </div><div class="content">
+                                    <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                                        laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                    <div class="date">Saint-Petersburg · 01/05/2023 </div>      
+                                    <div class="share"><img src="static/img/share.png"></div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>  
+                    <div class="swiper-pagination swiper-pagination3"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="/static/js/main.js"></script>
+{% endblock %}
+

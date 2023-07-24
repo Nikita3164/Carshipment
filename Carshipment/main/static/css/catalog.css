@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.block1{
+    height: 100vh;
+    background-image: url("/static/img/dealership.png");
+    background-position: center center;
+    position: relative;
+}
+
+.auto_text{
+    font-size: 120px;
+    font-family: "Montserrar", sans-serif;
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    width: 920px;
+    color: white;
+}
