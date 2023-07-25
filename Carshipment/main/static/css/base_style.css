@@ -52,9 +52,10 @@ body {
 
 .menu_content{
     opacity: 0;
-    display: none;
+    height: 0;
+    overflow: hidden;
     position: fixed;
-    transition: 0.5s;
+    transition: opacity 0.5s;
     background-color: rgba(255, 255, 255, 0.88);
     /*min-width: 1100px;*/
     z-index: 2;
@@ -75,7 +76,7 @@ body {
 }
 
 .menu:hover .menu_content{
-    display: block;
+    height: 588px;
     opacity: 1;
 }
 
@@ -94,8 +95,8 @@ body {
 }
 
 .logo{
-    padding-top: 8px;
-    padding-left: calc(50% - 78px)
+    margin-top: 8px;
+    margin-left: calc(50% - 78px)
 }
 
 .phone{
