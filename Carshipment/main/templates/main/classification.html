@@ -6,24 +6,36 @@
 
 {% block title %}Классификация Carshipment{% endblock %}
 
+{% block menu_params %}
+    onmousemove="onmouse()"
+    onmouseout="outmouse()"
+{% endblock %}
+
 {% block content %}
 
     <div class="video">
         <video autoplay muted loop><source src="static/intro/intro.mp4" type="video/mp4"></video>
-        <div class="video_line"></div>
+        <div class="video_line"><a href="#classification"><img src="static/img/scroll-down.png"></a></div>
     </div>
 
     <div class="container">
-        <div class="classification">
+        <div class="classification" id="classification">
             <table>
-                <tr><th width="20%">Класс</th><th width="30%">Описание</th><th width="50%">Примеры</th></tr> <!--ряд с ячейками заголовков-->
-                <tr><td>D-класс</td><td>Средний класс(семейный)</td><td>Mazda 6, Audi A4, Mercedes C-класса, Toyota Camry</td></tr>
-                <tr><td>данные</td><td>данные</td><td>данные</td></tr> <!--ряд с ячейками тела таблицы-->
+                <thead>
+                    <tr><th width="20%">Класс</th><th width="30%">Описание</th><th width="50%">Примеры</th></tr> <!--ряд с ячейками заголовков-->
+                </thead>
+                <tbody>
+                    <tr><td>D-класс</td><td>Средний класс(семейный)</td><td>Mazda 6, Audi A4, Mercedes C-класса, Toyota Camry</td></tr>
+                    <tr><td>E-класс</td><td>Бизнес-класс</td><td>Mercedes-Benz E-класса, BMW 5-й серии, Lexus GS, Volkswagen Arteon, Audi A6</td></tr>
+                    <tr><td>F-класс</td><td>Представительский класс</td><td>Rolls-Royce Ghost, Mercedes-Benz S-класса, Maybach 62,<br> BMW 7-й серии, Lincoln Town Car</td></tr>
+                    <tr><td>J-класс</td><td>Внедорожники, кроссоверы</td><td>Toyota Land Cruiser Prado, Land Rover Range Rover,<br> Mercedes-Benz GLS, Jeep Grand Cherokee</td></tr>
+                    <tr><td>S-класс</td><td>Спорткупе, суперкары</td><td>Lamborghini Gallardo, Alfa Romeo GT, Ferrari F40, Koenigsegg CCR</td></tr>
+            </tbody>
             </table>
         </div>
     </div>
 {% endblock %}
 
 {% block script %}
-    <script type="text/javascript" src="/static/js/header_classification.js"></script>
+    <script type="text/javascript" src="/static/js/header_transparent.js"></script>
 {% endblock %}

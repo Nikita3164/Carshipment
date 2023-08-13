@@ -47,19 +47,21 @@ body {
     position: absolute;
     margin-top: 12px;
     margin-left: 30px;
+    padding-bottom: 13px;
+} 
+
+.menu img{
     padding-bottom: 12px;
-}  
+}
 
 .menu_content{
-    opacity: 0;
     height: 0;
     overflow: hidden;
     position: fixed;
-    transition: opacity 0.5s;
+    transition: 0.5s;
     background-color: rgba(255, 255, 255, 0.88);
     /*min-width: 1100px;*/
     z-index: 2;
-    margin-top: 5px;
     margin-left: -50px;
 }
 
@@ -77,7 +79,6 @@ body {
 
 .menu:hover .menu_content{
     height: 588px;
-    opacity: 1;
 }
 
 .menu:hover img{
@@ -108,8 +109,8 @@ body {
 /*Раздел с продажами*/
 
 .promotion img{
-    width: 100%; 
-    display: block;  
+    height: calc(100vh - 70px); 
+    display: block; 
 }
 
 #promo_pagination{
@@ -902,8 +903,16 @@ a{
         width: 30px;
     }
 
+    .menu img{
+        padding-bottom: 4px;
+    }
+
     .menu_content{
         margin-left: -14px;
+    }
+
+    .menu:hover .menu_content{
+        height: 539px;
     }
 
     .menu_line{
@@ -912,8 +921,8 @@ a{
     }
 
     .logo{
-        padding-top: 4;
-        padding-left: 40% ;
+        margin-left: calc(50% - 52.5px);
+        margin-top: 6px;
     }
 
     .logo img{
@@ -922,10 +931,14 @@ a{
 
     #keys{
         content: url("/static/img/keys_mobile.png");
+        height: calc(100vh - 45px);
+        object-fit: cover;
     }
 
     #cars{
         content: url("/static/img/cars_mobile.png");
+        height: calc(100vh - 45px);
+        object-fit: cover;
     }
 
     .text{

@@ -7,13 +7,19 @@
 
 {% block title %}Каталог автомобилей{% endblock %}
 
+{% block menu_params %}
+    onmousemove="onmouse()"
+    onmouseout="outmouse()"
+{% endblock %}
+
 {% block content %}
     <div class="block1">
         <div class="auto_text">АВТОМОБИЛИ CARSHIPMENT</div>
+        <a href="#catalog"><img src="static/img/scroll-down.png"></a>
     </div>
 
     <div class="container">
-        <div class="catalog">
+        <div class="catalog" id="catalog">
             <div class="intro_text">
                 Представляем Вашему вниманию наш модельный ряд, который ежедневно обновляется. 
                 Если у Вас возникнут вопросы, обратитесь к нам на почту email@email.ru или оставьте заявку через форму.
@@ -32,8 +38,34 @@
             </div>
         </div>
     </div>
+
+
+    <div class="parallax">
+        <div class="parallax__layer parallax__layer--back">
+            <div class="background-parallax">
+                Re
+            </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+            <nav>
+                <div class="nav-item"><a>Классификация</a></div>
+                <div class="nav-item"><a>Наши услуги</a></div>
+                <div class="nav-item"><a>Партнерство</a></div>
+                <div class="nav-item"><a>Обратиться</a></div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="application">
+        <div class="application-field">
+            <div class="application-title">Оставить заявку</div>
+            <input class="input-name" placeholder="Имя">
+            <input class="input-phone" placeholder="Телефон">
+            <button class="apply-button">Обратиться</button>
+        </div>
+    </div>
 {% endblock %}
 
 {% block script %}
-    <script type="text/javascript" src="/static/js/header_classification.js"></script>
+    <script type="text/javascript" src="/static/js/header_transparent.js"></script>
 {% endblock %}

@@ -32,19 +32,34 @@ video{
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 36%);
 }
 
+.video_line img{
+    width: 70px;
+    filter: invert(100%);
+    margin: 120px auto 0px auto;
+    display: block;
+    transition: 0.5s;
+}
+
+.video_line img:hover{
+    margin-top: 150px;
+    cursor: pointer;
+}
+
 .classification{
     padding: 50px 0;
 }
 
+tr{
+    height: 90px;
+}
+
 th{
     background-color: black;
-    height: 80px;
     color: white;
  }
  /* границы ячеек тела таблицы */
  td{
     background-color: #dcdcdc;
-    height: 80px;
  }
 
  table{

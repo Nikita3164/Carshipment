@@ -16,7 +16,7 @@
     font-size: 120px;
     font-weight: 600;
     position: absolute;
-    bottom: 110px;
+    bottom: 160px;
     right: 10px;
     width: 950px;
     color: white;
@@ -32,6 +32,21 @@
     font-size: 36px;
     text-align: center;
     padding: 20px 0;
+}
+
+.block1 img{
+    width: 70px;
+    filter: invert(100%);
+    display: block;
+    transition: 0.5s;
+    right: calc(50% - 35px);
+    bottom: 70px;
+    position: absolute;
+}
+
+.block1 img:hover{
+    bottom: 40px;
+    cursor: pointer;
 }
 
 .items{
@@ -55,17 +70,17 @@
     position: relative;
 }
 
-.item-img #logo{
+#logo{
     width: 80%;
     margin: 0 auto;
     position: absolute;
     top: 30%;
     left: 10%;
-    opacity: 0;
+    z-index: -1;
     transition: 0.3s;
 }
 
-.item-img #main{
+#main{
     width: 100%;
     display: block;
     border-radius: 3px;
@@ -76,12 +91,12 @@
     cursor: pointer;
 }
 
-.catalog-item:hover .item-img #main{
-    opacity: 0.3;
+.catalog-item:hover #logo{
+    z-index: 1 !important;
 }
 
-.catalog-item:hover .item-img #logo{
-    opacity: 1;
+.catalog-item:hover #main{
+    opacity: 0.3;
 }
 
 .item-title{
@@ -95,3 +110,144 @@
     font-weight: 400;
     padding-top: 5px;
 }
+
+  .parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-1px);
+    transform: translateZ(-1px);
+  }
+
+
+  /* demo styles
+  --------------------------------------------- */
+
+
+  .parallax {
+    font-size: 200%;
+  }
+
+   /* add some padding to force scrollbars */
+  .parallax__layer {
+    padding: 100vh 0;
+  }
+
+   /* centre the content in the parallax layers */
+  .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+h1{
+    opacity: 1;
+    top: 40%;
+    left: 20%;
+    position: absolute;
+    color: black;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+nav{
+    top: 40%;
+    left: 20%;
+    position: absolute;
+    display: flex;
+}
+
+.nav-item{
+    font-size: 36px;
+    display: inline-block;
+    padding-left: 20px;
+    color: black;
+}
+
+.background-parallax{
+    background-image: url("/static/img/parallax-img.png");
+    background-position: center center;
+    background-size: 100%;
+}
+
+
+
+.application{
+    background-image: url("/static/img/application-img.png");
+    background-position: center center;
+    background-size: 100%;
+    height: 75vh;
+}
+
+.application-field{
+    width: 45%;
+    height: 45%;
+    background-color: rgb(255, 255, 255, 0.7);
+    margin: 0 auto;
+    padding-top: 40px;
+    background-clip: content-box;
+}
+
+.application-title{
+    text-align: center;
+    padding: 2% 0;
+    font-size: 30px;
+}
+
+.application-field input{
+    display: block;
+    width: 88.5%;
+    height: 20%;
+    font-size: 25px;
+    font-weight: 400;
+    
+    border-radius: 5px;
+    border: 2px solid white;
+    padding-left: 1%;
+    margin: 0 5%;
+    margin-bottom: 2.6%;
+}
+
+.application-field input:focus{
+    border-color: black;
+    outline: none
+}
+
+.apply-button{
+    width: 30%;
+    height: 15%;
+    margin: 0 35%;
+    background: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 17px;
+    transition: 0.4s;
+}
+
+.apply-button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
