@@ -27,3 +27,16 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Request(models.Model):
+    id = models.AutoField(primary_key=True)
+    subject = models.TextField()
+    name = models.TextField()
+    phone_number = models.CharField(max_length=20)
+
+    class Meta:
+        db_table = 'Requests'
+
+    def __str__(self):
+        return f"Заявка {self.id}: {self.subject} - {self.name}"

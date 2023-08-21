@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.index),
     path('classification', views.setup),
     path('catalog', views.catalog),
+    path('news', views.news)
 ]

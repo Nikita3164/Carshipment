@@ -25,22 +25,22 @@
                 Если у Вас возникнут вопросы, обратитесь к нам на почту email@email.ru или оставьте заявку через форму.
             </div>
             <div class="items">
+                {% for car in cars %}
                 <div class="catalog-item">
                     <div class="item-img">
                         <img id="logo" src="/static/img/maserati_logo.png">
                         <img id="main" src="/static/img/car1.png">
                     </div>
-                    <div class="item-title"><b>Maserati</b></div>
-                    <div class="item-subtitle">Рестайлинг</div>
+                    <div class="item-title"><b>{{ car.model }}</b></div>
+                    <div class="item-subtitle">{{ car.year }}</div>
                 </div>
-                <div class="catalog-item"></div>
-                <div class="catalog-item"></div>
+                {% endfor %}
             </div>
         </div>
     </div>
 
 
-    <div class="parallax">
+    <!---div class="parallax">
         <div class="parallax__layer parallax__layer--back">
             <div class="background-parallax">
                 Re
@@ -54,7 +54,7 @@
                 <div class="nav-item"><a>Обратиться</a></div>
             </nav>
         </div>
-    </div>
+    </div-->
 
     <div class="application">
         <div class="application-field">

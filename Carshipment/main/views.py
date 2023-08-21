@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Car, News
 
 # Create your views here.
 def index(request):
@@ -10,4 +11,10 @@ def setup(request):
 
 
 def catalog(request):
-    return render(request, 'main/catalog.html')
+    cars = Car.objects.all()
+    return render(request, 'main/catalog.html', {'cars': cars})
+
+
+def news(request):
+    news = News.objects.all()
+    return render(request, 'main/news.html', {'news': news})
