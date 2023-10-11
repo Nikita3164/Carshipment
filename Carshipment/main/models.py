@@ -3,10 +3,16 @@ from django.db import models
 # Create your models here.
 class Car(models.Model):
     manufacturer = models.TextField()
-    seria = models.TextField()
     model = models.TextField()
+    generation = models.TextField() 
     year = models.IntegerField()
+    color = models.TextField()
     mileage = models.IntegerField()
+    engine_capacity = models.DecimalField(max_digits=5, decimal_places=2)
+    engine_power_hp = models.IntegerField() 
+    transmission = models.TextField()
+    acceleration_0_100 = models.DecimalField(max_digits=5, decimal_places=2)
+    price = models.TextField()
 
     class Meta:
         db_table = 'Cars'

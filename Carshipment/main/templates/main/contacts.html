@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+
+{% block stylesheet %}
+    <link type="text/css" rel="stylesheet" href="static/css/contacts.css">
+{% endblock %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Контакты</h1>
+        <hr id="first">
+        <img src="static/img/contacts.jpg">
+        <div class="content-text">
+            <h2>Регионы</h2>
+            <div class="regions">Москва, Московская область, Владимирская область</div>
+            <h2>Клиентская поддержка</h2>
+            <ul>
+                <li>Телефон</li>
+                <li>Электронная почта</li>
+                <li>Часы работы</li>
+            </ul>
+            <ul id="values">
+                <li>+7 996 979 45 03</li>
+                <li>support@support.dot</li>
+                <li>8:00 - 19:00 по МСК</li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+            <div class="application-field">
+                <div class="application-title">Оставить заявку</div>
+                {{ form.name }}
+                {{ form.subject }}
+                {{ form.phone_number }}
+                <button class="apply-button" type="submit">Обратиться</button>
+            </div>
+    </form>
+{% endblock %}

@@ -56,14 +56,27 @@
         </div>
     </div-->
 
-    <div class="application">
-        <div class="application-field">
-            <div class="application-title">Оставить заявку</div>
-            <input class="input-name" placeholder="Имя">
-            <input class="input-phone" placeholder="Телефон">
-            <button class="apply-button">Обратиться</button>
+    <!-- request_form.html -->
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="application">
+            <div class="application-field">
+                <div class="application-title">Оставить заявку</div>
+                {{ form.name }}
+                {{ form.phone_number }}
+                <button class="apply-button" type="submit">Обратиться</button>
+            </div>
         </div>
-    </div>
+    </form>
+
+    <!-- Блок для отображения сообщения (если форма была успешно отправлена) -->
+    {% if form_submitted %}
+        <div>
+            <p>Заявка успешно отправлена!</p>
+        </div>
+    {% endif %}
+
 {% endblock %}
 
 {% block script %}

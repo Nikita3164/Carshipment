@@ -1,0 +1,84 @@
+{% extends 'main/base.html' %}
+
+{% block stylesheet %}
+    <link type="text/css" rel="stylesheet" href="static/css/model.css">
+{% endblock %}
+
+{% block title %}{{ car.model }} {{  car.generation  }}{% endblock %}
+
+{% block content %}
+    <h1>{{ car.model }} {{ car.generation }}</h1>
+
+    <div class="container">
+
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                {% for image in images %}
+                    <div class="swiper-slide">
+                        <img src="static/img/{{ image }}">
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {% for image in images %}
+                    <div class="swiper-slide">
+                        <img src="static/img/{{ image }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <h2>Описаниe</h2>
+        <div class="description-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta excepturi in quibusdam, 
+            architecto reiciendis nobis voluptas deleniti sed natus facilis deserunt earum amet illum delectus odio dolor esse corrupti optio.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, atque, omnis mollitia quibusdam ea nulla asperiores obcaecati 
+            aspernatur nobis eos quo incidunt temporibus? Tempora unde placeat optio necessitatibus laudantium sunt?
+        </div>
+
+        <div class="specifications">
+            <h2>Характеристики</h2>
+            <ul>
+                <li>Поколение</li>
+                <li>Год выпуска</li>
+                <li>Пробег</li>
+                <li>Цвет</li>
+                <li>Тип двигателя</li>
+                <li>Объём двигателя</li>
+                <li>Мощность</li>
+                <li>КПП</li>
+                <li>Привод</li>
+                <li>Разгон до 100 км/ч</li>
+                <li>Максимальная скорость</li>
+            </ul>
+            
+            <ul id="values">
+                <li>{{ car.generation }}</li>
+                <li>{{ car.year }}</li>
+                <li>{{ car.mileage }} км</li>
+                <li>{{ car.color }}</li>
+                <li>{{ car.engine_type }}</li>
+                <li>{{ car.engine_capacity }} л {{ car.engine_cylinder }}</li>
+                <li>{{ car.engine_power }} л.с.; {{ car.engine_power_kw }} кВт</li>
+                <li>{{ car.transmission }}</li>
+                <li>{{ car.drive }}</li>
+                <li>{{ car.acceleration }} с</li>
+                <li>{{ car.max_speed }} км/ч</li>
+            </ul>
+        </div>
+
+        <div class="price">
+            <h2>Цена</h2>
+            <div class="price-value">{{car.price}} p.</div>
+            <div class="details">Растоможен, Россия</div>
+        </div>
+
+    </div>
+{% endblock %}
+{% block script %}
+   <script type="text/javascript" src="/static/js/model.js"></script>
+{% endblock %}
