@@ -217,7 +217,7 @@ nav{
 .application-field input{
     display: block;
     width: 88.5%;
-    height: 20%;
+    height: 60px;
     font-size: 25px;
     font-weight: 400;
     
@@ -235,7 +235,7 @@ nav{
 
 .apply-button{
     width: 30%;
-    height: 35px;
+    height: 40px;
     margin: 0 35%;
     margin-bottom: 2.6%;
     background: none;

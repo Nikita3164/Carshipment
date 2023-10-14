@@ -25,7 +25,7 @@ a {
 .header {
     position: sticky;
     top: 0;
-    height: 70px;
+    height: 60px;
     background-color: white;
     z-index: 2;
     transition: 0.5s;  
@@ -40,23 +40,23 @@ a {
 }
 
 .menu img, .phone img{
-    width: 42px;
+    width: 37px;
     transition: 0.3s;
 }
 
 .logo img{
-    width: 156px;
+    width: 134px;
 }
 
 .menu{
     position: absolute;
-    margin-top: 12px;
+    margin-top: 11px;
     margin-left: 30px;
-    padding-bottom: 13px;
+    padding-bottom: 6px;
 } 
 
 .menu img{
-    padding-bottom: 12px;
+    padding-bottom: 8px;
 }
 
 .menu_content{
@@ -101,20 +101,20 @@ a {
 }
 
 .logo{
-    margin-top: 8px;
-    margin-left: calc(50% - 78px)
+    margin-top: 7px;
+    margin-left: calc(50% - 67px)
 }
 
 .phone{
     float: right;
-    padding-top: 12px;
+    padding-top: 11px;
     padding-right: 30px;
 }
 
 /*Раздел с продажами*/
 
 .promotion img{
-    height: calc(100vh - 70px); 
+    height: calc(100vh - 60px); 
     display: block; 
 }
 
@@ -307,19 +307,19 @@ h1.visible {
 
 .line-text{
     position: absolute;
-    right: 82px;
+    right: 72px;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 34px;
-    padding-top: 10px;
+    padding-top: 13px;
 }
 
 .line img{
-    top: 20px;
-    right: 55px;
+    top: 25px;
+    right: 45px;
     position: absolute;
-    width: 15px;
+    width: 13px;
     transition: 0.5s;
 }
 
@@ -327,9 +327,11 @@ h1.visible {
     font-family: 'Montserrat', sans-serif;
     width: 44%;
     padding: 0 3%;
-    padding-top: 5%;
+    padding-top: 16%;
     color: white;
+    font-weight: 400;
     font-size: 100px;
+    text-align: center;
     vertical-align: top;
     display: inline-block;
     opacity: 0;
