@@ -395,7 +395,7 @@ h1.visible {
 
 .carshipment{
     background-color: white;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 
 .carshipment img{
@@ -408,8 +408,7 @@ h1.visible {
 
 .info{
     font-family: 'Montserrat', sans-serif;
-    font-size: 72px;
-    text-align: center;
+    font-size: 57px;
 }
 
 /*Пресс-релизы*/
@@ -432,7 +431,7 @@ h1.visible {
 
 .title_press{
     font-family: 'Montserrat', sans-serif;
-    font-size: 80px;
+    font-size: 70px;
     padding: 15px 0; 
 }
 
