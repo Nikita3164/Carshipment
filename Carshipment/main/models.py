@@ -13,7 +13,7 @@ class Car(models.Model):
     transmission = models.TextField()
     acceleration_0_100 = models.DecimalField(max_digits=5, decimal_places=2)
     price = models.TextField()
-
+    img_addresses = models.TextField()
     class Meta:
         db_table = 'Cars'
 
