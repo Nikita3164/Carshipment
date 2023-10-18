@@ -40,6 +40,7 @@ img{
 
 .regions{
     font-size: 20px;
+    font-weight: 500;
 }
 
 ul{
@@ -50,7 +51,8 @@ ul{
 }
 
 li{
-  font-size: 20px;
+    font-weight: 500;
+    font-size: 20px;
 }
 
 #values{
@@ -111,4 +113,48 @@ li{
     background-color: black;
     color: white;
     cursor: pointer;
+}
+
+@media (max-width: 420px) {
+    h1{
+        font-size: 25px;
+        padding: 10px 0;
+    }
+
+    #first{
+        margin-bottom: 15px;
+    }
+
+    hr{
+        margin-top: 15px;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    .content-text{
+        padding: 0;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    .regions{
+        font-size: 16px;
+    }
+
+    ul{
+        margin: 0;
+    }
+
+    li{
+        font-size: 16px;
+    }
+
+    .application-field{
+        width: 100%;
+    }
 }
