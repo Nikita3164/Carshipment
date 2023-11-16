@@ -684,7 +684,7 @@ a{
     }
 }
 
-@media (max-width: 1500px){
+@media (max-width: 1550px){
     .container{
         max-width: 1200px;
     }
@@ -891,7 +891,7 @@ a{
     }
 }
 
-@media (max-width: 420px){
+@media (max-width: 500px){
     .container{
         max-width: 370px !important;
     }
@@ -943,12 +943,14 @@ a{
 
     #keys{
         content: url("/static/img/keys_mobile.png");
+        width: 100%;
         height: calc(100vh - 45px);
         object-fit: cover;
     }
 
     #cars{
         content: url("/static/img/cars_mobile.png");
+        width: 100%;
         height: calc(100vh - 45px);
         object-fit: cover;
     }

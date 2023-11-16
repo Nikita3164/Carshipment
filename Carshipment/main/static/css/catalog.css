@@ -254,6 +254,17 @@ nav{
         font-size: 25px;
     }
 
+    .block1{
+        background-position: 1620px center;
+    }
+
+    .auto_text{
+        font-size: 35px;
+        left: 95px;
+        width: none;
+
+    }
+
     .catalog-item{
         flex-basis: 48%;
         height: 32vh;
@@ -267,6 +278,13 @@ nav{
 
     .item-subtitle{
         font-size: 15px;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .catalog-item{
+        height: 33.5vh;
     }
 }
 
