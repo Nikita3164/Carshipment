@@ -76,3 +76,20 @@ th{
     padding: 50px 0;
     width: 100%;
  }
+
+
+ @media (max-width: 500px) {
+    .classification-text{
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+    th{
+        width: 30%;
+    }
+    
+    table {
+        font-size: 11px;
+        padding: 20px 0;
+    }
+ }

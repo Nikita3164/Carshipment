@@ -24,7 +24,8 @@ def catalog(request):
             # Установите флаг в сессии, чтобы указать успешную отправку формы
             request.session['form_submitted'] = True
 
-            path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
+            path = "//var//www//auto_site//Carshipment//main//Bot"
+            #path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
             
             # Откройте файл data.json и добавьте новую заявку к существующим данным
             with open(path, 'r') as json_file:
@@ -37,7 +38,7 @@ def catalog(request):
 
             # Запишите обновленные данные в файл data.json
             with open(path, 'w') as json_file:
-                json.dump(data, json_file, indent=4)
+                json.dump(data, json_file, indent=4, ensure_ascii=False)
 
             # Перенаправление на ту же страницу
             return redirect('catalog')
@@ -69,7 +70,8 @@ def contacts(request):
             # Установите флаг в сессии, чтобы указать успешную отправку формы
             request.session['form_submitted'] = True
 
-            path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
+            path = "//var//www//auto_site//Carshipment//main//Bot"
+            #path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
             
             # Откройте файл data.json и добавьте новую заявку к существующим данным
             with open(path, 'r') as json_file:
@@ -82,7 +84,7 @@ def contacts(request):
 
             # Запишите обновленные данные в файл data.json
             with open(path, 'w') as json_file:
-                json.dump(data, json_file, indent=4)
+                json.dump(data, json_file, indent=4, ensure_ascii=False)
 
             # Перенаправление на ту же страницу
             return redirect('contacts')

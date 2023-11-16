@@ -13,7 +13,7 @@ class RequestForm(forms.ModelForm):
 
 class RequestFormExtended(forms.ModelForm):
     class Meta:
-        CHOICES = [('1', 'Покупка автом'), ('2', 'Продажа авто'), ('3', 'Сотрудничество')]
+        CHOICES = [('Покупка авто', 'Покупка авто'), ('Продажа авто', 'Продажа авто'), ('Сотрудничество', 'Сотрудничество')]
         model = Request
         fields = ['name', 'subject', 'phone_number']
         widgets = {

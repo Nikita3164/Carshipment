@@ -249,7 +249,7 @@ nav{
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
     .intro_text{
         font-size: 25px;
     }
@@ -260,8 +260,8 @@ nav{
 
     .auto_text{
         font-size: 35px;
-        left: 95px;
-        width: none;
+        left: 90px;
+        width: 283px;
 
     }
 
@@ -279,12 +279,42 @@ nav{
     .item-subtitle{
         font-size: 15px;
     }
+
+    .application{
+        height: 50vh;
+        background-position: 1000px center;
+        background-size: auto;
+    }
+
+    .application-field{
+        width: 85%;
+        padding-top: 70px;
+    }
+
+    .application-title{
+        padding: 4% 0;
+        font-size: 24px;
+    }
+
+    .application-field input{
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 4%;
+        height: 45px;
+    }
+
+    .apply-button{
+        width: 50%;
+        height: 40px;
+        margin: 0 25%;
+        margin-bottom: 4%;
+    }
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 376px) {
     .catalog-item{
-        height: 33.5vh;
+        height: 38vh;
     }
 }
 
