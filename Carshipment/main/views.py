@@ -2,6 +2,18 @@ from django.shortcuts import render, redirect
 from .models import Car, News
 from .forms import RequestForm, RequestFormExtended
 import json
+import os
+
+# Ваша основная директория проекта
+base_dir = '/var/www/auto_site/Carshipment'
+
+# Имя подкаталога и имя файла
+subdirectory = 'main/Bot'
+file_name = 'data.json'
+
+# С использованием os.path.join формируем полный путь к файлу
+path = os.path.join(base_dir, subdirectory, file_name)
+
 
 # Create your views here.
 def index(request):
@@ -24,9 +36,8 @@ def catalog(request):
             # Установите флаг в сессии, чтобы указать успешную отправку формы
             request.session['form_submitted'] = True
 
-            path = "//var//www//auto_site//Carshipment//main//Bot"
-            #path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
-            
+            # path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
+
             # Откройте файл data.json и добавьте новую заявку к существующим данным
             with open(path, 'r') as json_file:
                 data = json.load(json_file)
@@ -41,7 +52,7 @@ def catalog(request):
                 json.dump(data, json_file, indent=4, ensure_ascii=False)
 
             # Перенаправление на ту же страницу
-            return redirect('catalog')
+            return redirect('/catalog')
     else:
         form = RequestForm()
 
@@ -70,9 +81,8 @@ def contacts(request):
             # Установите флаг в сессии, чтобы указать успешную отправку формы
             request.session['form_submitted'] = True
 
-            path = "//var//www//auto_site//Carshipment//main//Bot"
-            #path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
-            
+            # path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
+
             # Откройте файл data.json и добавьте новую заявку к существующим данным
             with open(path, 'r') as json_file:
                 data = json.load(json_file)
@@ -87,12 +97,12 @@ def contacts(request):
                 json.dump(data, json_file, indent=4, ensure_ascii=False)
 
             # Перенаправление на ту же страницу
-            return redirect('contacts')
+            return redirect('/contacts')
     else:
         form = RequestFormExtended()
 
     # Если форма была успешно отправлена, передайте флаг в контекст
     form_submitted = request.session.get('form_submitted', False)
     request.session['form_submitted'] = False  # Сбросьте флаг после отображения
-    
+
     return render(request, 'main/contacts.html', {'form': form, 'form_submitted': form_submitted})
