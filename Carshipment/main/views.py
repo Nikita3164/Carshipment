@@ -3,6 +3,7 @@ from .models import Car, News
 from .forms import RequestForm, RequestFormExtended
 import json
 import os
+import datetime
 
 # Ваша основная директория проекта
 base_dir = '/var/www/auto_site/Carshipment'
@@ -31,6 +32,8 @@ def catalog(request):
         if form.is_valid():
             # Установите значение "покупка автомобиля" в поле subject
             form.instance.subject = "покупка автомобиля"
+            form.instance.date = datetime.datetime.now().date()
+            form.instance.time = datetime.datetime.now().time()
             form.save()
 
             # Установите флаг в сессии, чтобы указать успешную отправку формы
@@ -44,7 +47,9 @@ def catalog(request):
                 data.append({
                     'subject': form.instance.subject,
                     'name': form.instance.name,
-                    'phone_number': form.instance.phone_number
+                    'phone_number': form.instance.phone_number,
+                    'date': form.instance.date,
+                    'time': form.instance.time
                 })
 
             # Запишите обновленные данные в файл data.json
@@ -76,6 +81,8 @@ def contacts(request):
     if request.method == 'POST':
         form = RequestFormExtended(request.POST)
         if form.is_valid():
+            form.instance.date = datetime.datetime.now().date()
+            form.instance.time = datetime.datetime.now().time()
             form.save()
 
             # Установите флаг в сессии, чтобы указать успешную отправку формы
@@ -89,7 +96,9 @@ def contacts(request):
                 data.append({
                     'subject': form.instance.subject,
                     'name': form.instance.name,
-                    'phone_number': form.instance.phone_number
+                    'phone_number': form.instance.phone_number,
+                    'date': form.instance.date,
+                    'time': form.instance.time
                 })
 
             # Запишите обновленные данные в файл data.json

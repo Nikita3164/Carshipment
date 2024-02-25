@@ -40,9 +40,12 @@ class Request(models.Model):
     subject = models.TextField()
     name = models.TextField()
     phone_number = models.CharField(max_length=20)
+    comment = models.TextField()
+    date = models.DateField()
+    time = models.TimeField()
 
     class Meta:
         db_table = 'Requests'
 
     def __str__(self):
-        return f"Заявка {self.id}: {self.subject} - {self.name}"
+        return f"Заявка {self.id} от {self.date} {self.time}: {self.subject} - {self.name}"

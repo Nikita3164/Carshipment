@@ -49,6 +49,7 @@ a {
 }
 
 .menu{
+    width: 37px;
     position: absolute;
     margin-top: 11px;
     margin-left: 30px;
@@ -60,6 +61,7 @@ a {
 }
 
 .menu_content{
+    width: 530px;
     height: 0;
     overflow: hidden;
     transition: 0.7s;
@@ -902,6 +904,7 @@ a{
     }
 
     .menu{
+        width: 30px;
         margin-top: 6px;
         margin-left: 14px;
         margin-bottom: 6px;
@@ -921,6 +924,7 @@ a{
     }
 
     .menu_content{
+        width: 300px;
         margin-left: -20px;
     }
 
@@ -1041,6 +1045,7 @@ a{
         font-size: 30px;
     }
 
+    /* Старый дизайн блока новостей
     .news{
         height: 680px;
     }
@@ -1082,6 +1087,50 @@ a{
     .share img{
         width: 25px;
     }
+    */
+
+    .news{
+        height: 120px;
+    }
+
+    .content{
+        width: calc(100% - 120px);
+    }
+
+    .picture{
+        width: 120px;
+        height: 120px;
+    }
+
+    .picture img{
+        width: 100%;
+    }
+
+    .news_text{
+        font-size: 15px;
+    }
+
+    .date{
+        font-size: 15px;
+    }
+
+    .share{
+        padding-left: 2%;
+        padding-bottom: 2%;
+    }
+
+    .share, .share button{
+        width: 15px;
+        height: 15px;
+    }
+
+    .share button{
+        padding: 0;
+    }
+
+    .share img{
+        width: 15px;
+    }
 
     .swiper-button-next, .swiper-rtl .swiper-button-prev{
         right: 2px !important; 
@@ -1117,7 +1166,7 @@ a{
     }
 
     .mailing{
-        padding-top: 40px;
+        padding-top: 0;
         padding-left: 1%;
         float: none;
     }
