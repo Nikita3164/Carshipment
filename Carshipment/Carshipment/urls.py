@@ -24,5 +24,6 @@ urlpatterns = [
     path('catalog', include('main.urls')),
     path('news', include('main.urls')),
     path('model', include('main.urls')),
-    path('contacts', include('main.urls'))
+    path('contacts', include('main.urls')),
+    path('promotion', include('main.urls'))
 ]

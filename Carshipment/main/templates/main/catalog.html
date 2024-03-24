@@ -28,8 +28,8 @@
                 {% for car in cars %}
                 <div class="catalog-item">
                     <div class="item-img">
-                        <img id="logo" src="/static/img/maserati_logo.png">
-                        <img id="main" src="/static/img/{{ car.img_addresses }}.png">
+                        <img id="logo" src="/static/img/car-logo/{{ car.manufacturer }}.png">
+                        <img id="main" src="/static/img/car-img/{{ car.img_addresses }}.png">
                     </div>
                     <div class="item-title"><b>Место свободно</b></div>
                     <div class="item-subtitle">На фото: <br> {{ car.model }}</div>
@@ -67,6 +67,7 @@
                 {{ form.phone_number }}
                 {{ form.comment }}
                 <button class="apply-button" type="submit">Обратиться</button>
+                <div class="approval">Нажимая на кнопку "Обратиться", вы даете свое <a href="#">согласие</a> на обработку данныхю</div>
             </div>
         </div>
     </form>

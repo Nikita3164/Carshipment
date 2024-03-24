@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 *{
     font-weight: 600;
 }
@@ -72,6 +75,7 @@ a {
 }
 
 .menu_line{
+    font-weight: 500;
     font-size: 36px;
     padding: 20px 78px;
     transition: 0.2s;
@@ -84,7 +88,7 @@ a {
 }
 
 .menu:hover .menu_content{
-    height: 588px;
+    height: 504px;
 }
 
 .menu:hover img{
@@ -360,7 +364,7 @@ h1.visible {
 
 .all_models{
     margin: 40px auto;
-    width: 440px;
+    width: 360px;
     height: 80px;
     opacity: 0;
     transition: 0.6s;
@@ -373,7 +377,7 @@ h1.visible {
 .all_border{
     border: 2px solid #cdcdcd;
     border-radius: 7px;
-    width: 440px;
+    width: 360px;
     height: 80px;
     transition: 0.3s;
 }
@@ -470,7 +474,7 @@ h1.visible {
 .news_text{
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500;
     width: 98%;
     vertical-align: top;
     padding-top: 1%;
@@ -479,6 +483,7 @@ h1.visible {
 
 .date{
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 35px;
     padding-left: 1%;
     padding-bottom: 1%;
@@ -983,7 +988,7 @@ a{
     }
 
     h1{
-        font-size: 37px;
+        font-size: 28px;
     }
 
     .block1{
@@ -1111,7 +1116,7 @@ a{
     }
 
     .date{
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .share{

@@ -11,7 +11,7 @@
         <h1>Новости</h1>
         {% for page in news %}
         <div class="news">
-            <div class="picture"><img src="static/img/{{ page.img_address }}">
+            <div class="picture"><img src="static/img/news-img/{{ page.img_address }}">
             </div><div class="content">
                 <div class="news_text">{{ page.text }}</div>
                 <div class="date">{{ page.place }} · {{ page.date }}</div>

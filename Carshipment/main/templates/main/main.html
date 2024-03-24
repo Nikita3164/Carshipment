@@ -26,7 +26,7 @@
     <div class="models">
         <h1>МОДЕЛИ АВТОПАРКА</h1>
         <div class="container" id="models-contain">
-            <a href="/catalog"><div class="car-img"><img src="static/img/car3.png"><div class="line"><div class="line-text">Перейти</div><img src="static/img/pointer.png"></div></a>
+            <a href="/catalog"><div class="car-img"><img src="static/img/car-img/car3.png"><div class="line"><div class="line-text">Перейти</div><img src="static/img/pointer.png"></div></a>
             </div><div class="about">Свободное место</div>
             <!--<div id="c1" class="car-img"><img src="static/img/car2.png"><div class="line"><div class="line-text">Перейти</div><img src="static/img/pointer.png"></div>
             </div><div id="a1" class="about">Lorem ipsum dolor sit amet, 
@@ -51,38 +51,18 @@
                 <div class="title_press"><a href="/news">Пресс-релизы</a></div>
                 <div class="swiper newsSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="news">
-                                <div class="picture"><img src="static/img/Moscow.png">
-                                </div><div class="content">
-                                    <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                    na</div>
-                                    <div class="date">Moscow · 01/05/2023 </div>
-                                    <div class="share">
-                                        <button onclick="copyLink()" style="border: none; background-color: #e2e2e2; cursor: pointer;">
-                                            <img src="static/img/share.png">
-                                        </button><input type="text" id="share-link" value="http://carshipment.ru" style="transform: scale(0, 0); position: absolute;">
-                                    </div>
-                                </div>    
-                            </div>   
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="news">
-                                <div class="picture"><img src="static/img/Petersburg.png">
-                                </div><div class="content">
-                                    <div class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                                        laboris nisi ut aliquip ex ea commodo consequat.</div>
-                                    <div class="date">Saint-Petersburg · 01/05/2023 </div>      
-                                    <div class="share">
-                                        <button onclick="copyLink()" style="border: none; background-color: #e2e2e2; cursor: pointer;">
-                                            <img src="static/img/share.png">
-                                        </button><input type="text" id="share-link" value="http://carshipment.ru" style="transform: scale(0, 0); position: absolute;">
-                                    </div>
+                        {% for page in news %}
+                            <div class="swiper-slide">
+                                <div class="news">
+                                    <div class="picture"><img src="static/img/news-img/{{ page.img_address }}">
+                                    </div><div class="content">
+                                        <div class="news_text">{{ page.text }}</div>
+                                        <div class="date">{{ page.place }} · {{ page.date }}</div>
+                                        <div class="share"><img src="static/img/share.png"></div>
+                                    </div>    
                                 </div>
-                            </div>  
-                        </div>
+                            </div>
+                        {% endfor %}    
                     </div>  
                     <div class="swiper-pagination swiper-pagination3"></div>
                 </div>

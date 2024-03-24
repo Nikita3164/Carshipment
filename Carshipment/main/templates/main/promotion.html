@@ -1,0 +1,68 @@
+{% extends 'main/base.html' %}
+
+{% block stylesheet %}
+    <link type="text/css" rel="stylesheet" href="static/css/catalog.css">
+    <link type="text/css" rel="stylesheet" href="static/css/promotion.css">
+    
+{% endblock %}
+
+{% block title %}Продвижение продажи{% endblock %}
+
+{% block menu_params %}
+    onmousemove="onmouse()"
+    onmouseout="outmouse()"
+{% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <div id="sales" class="text">Обращение по продвижению</div>
+        
+    </div>
+
+    <div class="about-promo">
+        <div class="container">
+          <div class="about-text">
+            Представляем Вашему вниманию фирменную услугу по продвижению сделки и поиска автомобиля. Исходя из <a href="/classification">классификации</a>,
+            мы определяем подходящие для этого автомобили. 
+            Вы можете обратиться через форму или <a href="/contacts">контакты</a>.
+          </div>
+          <div class="about-img"><img src="static/img/promo.png"></div>
+        </div>
+    </div>
+
+    <div class="menu-block">
+      <div class="container">
+        <ul>
+          <li id="Auto">Автопарк</li>
+          <li id="Class">Классификация</li>
+          <li id="Cont">Контакты</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sale-form">
+        <form method="post">
+            {% csrf_token %}
+            <div class="application">
+                <div class="application-field">
+                    <div class="application-title">Оставить заявку</div>
+                    {{ form.name }}
+                    {{ form.phone_number }}
+                    {{ form.comment }}
+                    <button class="apply-button" type="submit">Обратиться</button>
+                </div>
+            </div>
+        </form>
+    
+        <!-- Блок для отображения сообщения (если форма была успешно отправлена) -->
+        {% if form_submitted %}
+            <div>
+                <p>Заявка успешно отправлена!</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="/static/js/header_transparent.js"></script>
+{% endblock %}
