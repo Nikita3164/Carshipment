@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 *{
     font-weight: 600;
 }
@@ -49,8 +52,9 @@ a {
 }
 
 .menu{
+    width: 37px;
     position: absolute;
-    margin-top: 11px;
+    margin-top: 10.5px;
     margin-left: 30px;
     padding-bottom: 6px;
 } 
@@ -60,6 +64,7 @@ a {
 }
 
 .menu_content{
+    width: 530px;
     height: 0;
     overflow: hidden;
     transition: 0.7s;
@@ -70,6 +75,7 @@ a {
 }
 
 .menu_line{
+    font-weight: 500;
     font-size: 36px;
     padding: 20px 78px;
     transition: 0.2s;
@@ -82,7 +88,7 @@ a {
 }
 
 .menu:hover .menu_content{
-    height: 588px;
+    height: 504px;
 }
 
 .menu:hover img{
@@ -358,7 +364,7 @@ h1.visible {
 
 .all_models{
     margin: 40px auto;
-    width: 440px;
+    width: 360px;
     height: 80px;
     opacity: 0;
     transition: 0.6s;
@@ -371,7 +377,7 @@ h1.visible {
 .all_border{
     border: 2px solid #cdcdcd;
     border-radius: 7px;
-    width: 440px;
+    width: 360px;
     height: 80px;
     transition: 0.3s;
 }
@@ -399,12 +405,12 @@ h1.visible {
 
 .carshipment{
     background-color: white;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 .carshipment img{
     width: 780px;
-    padding: 70px 0;
+    padding: 60px 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -468,7 +474,7 @@ h1.visible {
 .news_text{
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500;
     width: 98%;
     vertical-align: top;
     padding-top: 1%;
@@ -477,6 +483,7 @@ h1.visible {
 
 .date{
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 35px;
     padding-left: 1%;
     padding-bottom: 1%;
@@ -713,6 +720,8 @@ a{
 
     .info{
         font-size: 40px;
+		margin-left: 1%;
+		margin-right: 1%;
     }
 
     .news{
@@ -796,7 +805,7 @@ a{
     }
 
     .carshipment img{
-        width: 730px;
+        width: 710px;
         padding: 60px 0;
     }
 
@@ -902,6 +911,7 @@ a{
     }
 
     .menu{
+        width: 30px;
         margin-top: 6px;
         margin-left: 14px;
         margin-bottom: 6px;
@@ -914,6 +924,7 @@ a{
 
     .menu img, .phone img {
         width: 30px;
+		margin-top: 4%;
     }
 
     .menu img{
@@ -921,11 +932,12 @@ a{
     }
 
     .menu_content{
+        width: 300px;
         margin-left: -20px;
     }
 
     .menu:hover .menu_content{
-        height: 496px;
+        height: 372px;
     }
 
     .menu_line{
@@ -940,6 +952,7 @@ a{
 
     .logo img{
         width: 105px;
+		margin-top: -1%;
     }
 
     #keys{
@@ -979,11 +992,11 @@ a{
     }
 
     h1{
-        font-size: 37px;
+        font-size: 28px;
     }
 
     .block1{
-        padding-bottom: 50px;
+        padding-bottom: 20px;
     }
 
     .car-img{
@@ -1028,19 +1041,20 @@ a{
 
     .carshipment img{
         width: 350px;
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     .info{
         font-size: 20px;
-        padding-left: 2%;
-        padding-right: 2%;
+        padding-left: 1%;
+        padding-right: 1%;
     }
 
     .title_press{
         font-size: 30px;
     }
 
+    /* Старый дизайн блока новостей
     .news{
         height: 680px;
     }
@@ -1082,6 +1096,50 @@ a{
     .share img{
         width: 25px;
     }
+    */
+
+    .news{
+        height: 120px;
+    }
+
+    .content{
+        width: calc(100% - 120px);
+    }
+
+    .picture{
+        width: 120px;
+        height: 120px;
+    }
+
+    .picture img{
+        width: 100%;
+    }
+
+    .news_text{
+        font-size: 15px;
+    }
+
+    .date{
+        font-size: 13px;
+    }
+
+    .share{
+        padding-left: 2%;
+        padding-bottom: 2%;
+    }
+
+    .share, .share button{
+        width: 15px;
+        height: 15px;
+    }
+
+    .share button{
+        padding: 0;
+    }
+
+    .share img{
+        width: 15px;
+    }
 
     .swiper-button-next, .swiper-rtl .swiper-button-prev{
         right: 2px !important; 
@@ -1117,7 +1175,7 @@ a{
     }
 
     .mailing{
-        padding-top: 40px;
+        padding-top: 0;
         padding-left: 1%;
         float: none;
     }

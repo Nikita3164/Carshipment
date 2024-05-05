@@ -134,10 +134,15 @@ h1 {
 
     #values {
       padding-left: 20px;
-  }
+   }
 
     .price {
+      padding-left: 0;
+      padding-bottom: 15px;
       float: none;
-      font-size: 20px !important;
+    }
+
+    .price-value, .details{
+      font-size: 20px;
     }
   }

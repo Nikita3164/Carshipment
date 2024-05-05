@@ -26,7 +26,7 @@ var newsSwiper = new Swiper(".newsSwiper", {
         el: ".swiper-pagination3",
         clickable: true,
     },
-    mousewheel: true,
+    mousewheel: false,
     keyboard: true,
 });
 

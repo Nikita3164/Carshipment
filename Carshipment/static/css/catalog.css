@@ -6,7 +6,7 @@
 
 .block1{
     height: 100vh;
-    background-image: url("/static/img/dealership.png");
+    background-image: url("/static/img/dealership.webp");
     background-position: center center;
     position: relative;
 }
@@ -73,7 +73,8 @@
 
 #logo{
     position: absolute;
-    width: 90%;
+    width: 80%;
+    padding: 10%;
     z-index: -1;
     transition: 0.3s;
 }
@@ -248,6 +249,16 @@ nav{
     cursor: pointer;
 }
 
+.approval{
+    font-size: 14px;
+    font-weight: 400;
+    color: grey;
+    text-align: center;
+    width: 30%;
+    margin: 0 35%;
+    margin-bottom: 2.6%;
+}
+
 
 @media (max-width: 500px) {
     .intro_text{
@@ -281,14 +292,14 @@ nav{
     }
 
     .application{
-        height: 50vh;
-        background-position: 1000px center;
+        height: 430px;
+        background-position: center center;
         background-size: auto;
     }
 
     .application-field{
         width: 85%;
-        padding-top: 70px;
+        padding-top: 60px;
     }
 
     .application-title{
