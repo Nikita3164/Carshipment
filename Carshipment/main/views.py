@@ -8,8 +8,8 @@ import os
 import datetime
 
 # Ваша основная директория проекта
-#base_dir = '/var/www/auto_site/Carshipment'
-base_dir = 'C:/Users/fortu/OneDrive/Desktop/Сайт автомобили/auto_site/Carshipment'
+base_dir = '/var/www/auto_site/Carshipment'
+#base_dir = 'C:/Users/fortu/OneDrive/Desktop/Сайт автомобили/auto_site/Carshipment'
 
 # Имя подкаталога и имя файла
 subdirectory = 'main/Bot'
