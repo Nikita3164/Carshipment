@@ -355,6 +355,10 @@ textarea{
     .approval{
         font-size: 11px;
     }
+
+    #message{
+        width: 85%;
+    }
 }
 
 @media (max-width: 376px) {
