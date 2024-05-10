@@ -20,6 +20,21 @@ header{
   background-color: white;
 }
 
+#scroll-down{
+  width: 70px;
+  filter: invert(100%);
+  display: block;
+  transition: 0.5s;
+  right: calc(50% - 35px);
+  bottom: 70px;
+  position: absolute;
+}
+
+#scroll-down:hover{
+  bottom: 40px;
+  cursor: pointer;
+}
+
 .about-text{
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
@@ -44,7 +59,7 @@ a{
 }
 
 a:hover{
-  color: black;
+  color: white;
 }
 
 .menu-block{
@@ -67,6 +82,10 @@ li{
   color: #cdcdcd;
   display: inline-block;
   width: 33%;
+}
+
+li a:hover{
+  color: white;
 }
 
 #Auto{

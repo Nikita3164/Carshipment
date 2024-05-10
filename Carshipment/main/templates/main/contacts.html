@@ -31,13 +31,22 @@
 
     <form method="post">
         {% csrf_token %}
-            <div class="application-field">
-                <div class="application-title">Оставить заявку</div>
-                {{ form.name }}
-                {{ form.subject }}
-                {{ form.phone_number }}
-                {{ form.comment }}
-                <button class="apply-button" type="submit">Обратиться</button>
+            <div class="application">
+                <div class="application-field">
+                    <div class="application-title">Оставить заявку</div>
+                    {{ form.name }}
+                    {{ form.phone_number }}
+                    {{ form.subject }}
+                    {{ form.comment }}
+                    <button class="apply-button" type="submit">Обратиться</button>
+                    <div class="approval">Нажимая на кнопку "Обратиться", вы даете свое <a href="#">согласие</a> на обработку данныхю</div>
+                </div>
+                <!-- Блок сообщений -->
+                <div id="message" class="msg_hidden"></div>
             </div>
+            
     </form>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript" src="/static/js/requests.js"></script>
 {% endblock %}

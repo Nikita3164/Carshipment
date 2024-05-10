@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.http import JsonResponse
 from .models import Car, News
 from .forms import RequestForm, RequestFormExtended
 import json
@@ -34,46 +35,33 @@ def catalog(request):
     if request.method == 'POST':
         form = RequestForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
-            phone_number = form.cleaned_data['phone_number']
-            comment = form.cleaned_data['comment']
+            # Установите значение "Покупка автомобиля" в поле subject
+            form.instance.subject = "Покупка автомобиля"
+            form.instance.date = datetime.datetime.now().date()
+            form.instance.time = datetime.datetime.now().time()
+            form.save()
+            # path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
 
-            # Проверка пустых полей
-            if not name or not phone_number:
-                messages.error(request, 'Имя и номер телефона обязательны для заполнения')
-            else:
-                # Проверка имени на наличие специальных символов и цифр
-                if any(char.isdigit() or not char.isalnum() for char in name):
-                    messages.error(request, 'Имя не должно содержать специальных символов и цифр')
-                # Проверка номера телефона на наличие букв
-                elif any(char.isalpha() for char in phone_number):
-                    messages.error(request, 'Номер телефона не должен содержать букв')
-                else:
-                    # Установите значение "Покупка автомобиля" в поле subject
-                    form.instance.subject = "Покупка автомобиля"
-                    form.instance.date = datetime.datetime.now().date()
-                    form.instance.time = datetime.datetime.now().time()
-                    form.save()
-                    # path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
+            # Откройте файл data.json и добавьте новую заявку к существующим данным
+            with open(path, 'r') as json_file:
+                data = json.load(json_file)
+                data.append({
+                    'subject': form.instance.subject,
+                    'name': form.instance.name,
+                    'phone_number': form.instance.phone_number,
+                    'date': str(form.instance.date),
+                    'time': str(form.instance.time)
+                    })
 
-                    # Откройте файл data.json и добавьте новую заявку к существующим данным
-                    with open(path, 'r') as json_file:
-                        data = json.load(json_file)
-                        data.append({
-                            'subject': form.instance.subject,
-                            'name': form.instance.name,
-                            'phone_number': form.instance.phone_number,
-                            'date': str(form.instance.date),
-                            'time': str(form.instance.time)
-                        })
-
-                    # Запишите обновленные данные в файл data.json
-                    with open(path, 'w') as json_file:
-                        json.dump(data, json_file, indent=4, ensure_ascii=False)
-
-                    messages.success(request, 'Данные успешно отправлены')
-                    # Перенаправление на ту же страницу
-                    return redirect('/catalog')                            
+            # Запишите обновленные данные в файл data.json
+            with open(path, 'w') as json_file:
+                json.dump(data, json_file, indent=4, ensure_ascii=False)
+            
+            message = {
+                'message': 'Success',
+                'status': 'ok'
+            }
+            return JsonResponse(message)                           
     else:
         form = RequestForm()
 
@@ -121,15 +109,15 @@ def contacts(request):
                 json.dump(data, json_file, indent=4, ensure_ascii=False)
 
             # Перенаправление на ту же страницу
-            return redirect('/contacts')
+            message = {
+                'message': 'Success',
+                'status': 'ok'
+            }
+            return JsonResponse(message) 
     else:
         form = RequestFormExtended()
 
-    # Если форма была успешно отправлена, передайте флаг в контекст
-    form_submitted = request.session.get('form_submitted', False)
-    request.session['form_submitted'] = False  # Сбросьте флаг после отображения
-
-    return render(request, 'main/contacts.html', {'form': form, 'form_submitted': form_submitted})
+    return render(request, 'main/contacts.html', {'form': form})
 
 
 def promotion(request):
@@ -163,11 +151,24 @@ def promotion(request):
                 json.dump(data, json_file, indent=4, ensure_ascii=False)
 
             # Перенаправление на ту же страницу
-            return redirect('/catalog')
+            message = {
+                'message': 'Success',
+                'status': 'ok'
+            }
+            return JsonResponse(message) 
     else:
         form = RequestForm()
 
-    # Если форма была успешно отправлена, передайте флаг в контекст
-    form_submitted = request.session.get('form_submitted', False)
-    request.session['form_submitted'] = False  # Сбросьте флаг после отображения
-    return render(request, 'main/promotion.html', {'form': form, 'form_submitted': form_submitted})
+    return render(request, 'main/promotion.html', {'form': form})
+
+
+def security(request):
+    return render(request, 'main/security.html')
+
+
+def privacy(request):
+    return render(request, 'main/privacy.html')
+
+
+def agreement(request):
+    return render(request, 'main/agreement.html')

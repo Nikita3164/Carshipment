@@ -215,7 +215,7 @@ nav{
     font-size: 30px;
 }
 
-.application-field input{
+.application-field input, textarea{
     display: block;
     width: 88.5%;
     height: 60px;
@@ -227,6 +227,10 @@ nav{
     padding-left: 1%;
     margin: 0 5%;
     margin-bottom: 2.6%;
+}
+
+textarea{
+    resize: none;
 }
 
 .application-field input:focus{
@@ -262,6 +266,31 @@ nav{
     padding-bottom: 2.6%;
 }
 
+#message{
+    transition: 0.5s;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 45%;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+}
+
+.msg_hidden{
+    transform: translateY(-100%);
+    background-color: grey;
+    height: 0 !important;
+    padding: 0 !important;
+}
+
+.msg_error{
+    background-color: red;
+}
+
+.msg_success{
+    background-color: green;
+}
+
 
 @media (max-width: 500px) {
     .intro_text{
@@ -282,7 +311,6 @@ nav{
     .catalog-item{
         flex-basis: 48%;
         height: 32vh;
-        margin-right: 2%;
         margin-bottom: 2%;
     }
 
@@ -302,7 +330,7 @@ nav{
 
     .application-field{
         width: 85%;
-        padding-top: 60px;
+        padding-top: 30px;
     }
 
     .application-title{

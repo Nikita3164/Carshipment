@@ -6,9 +6,9 @@ class RequestForm(forms.ModelForm):
         model = Request
         fields = ['name', 'phone_number', 'comment']
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'Имя'}),
-            'phone_number': forms.TextInput(attrs={'placeholder': 'Телефон'}),
-            'comment': forms.TextInput(attrs={'placeholder': 'Комментарий'}),
+            'name': forms.TextInput(attrs={'class': 'formField', 'placeholder': 'Имя'}),
+            'phone_number': forms.TextInput(attrs={'class': 'formField', 'type': 'number', 'placeholder': 'Телефон'}),
+            'comment': forms.Textarea(attrs={'class': 'formField', 'placeholder': 'Комментарий'}),
         }
 
 
@@ -18,8 +18,8 @@ class RequestFormExtended(forms.ModelForm):
         model = Request
         fields = ['name', 'subject', 'phone_number', 'comment']
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'Имя'}),
+            'name': forms.TextInput(attrs={'class': 'formField', 'placeholder': 'Имя'}),
             'subject': forms.Select(choices=CHOICES),
-            'phone_number': forms.TextInput(attrs={'placeholder': 'Телефон'}),
-            'comment': forms.TextInput(attrs={'placeholder': 'Комментарий'}),
+            'phone_number': forms.TextInput(attrs={'class': 'formField', 'type': 'number', 'placeholder': 'Телефон'}),
+            'comment': forms.Textarea(attrs={'class': 'formField', 'placeholder': 'Комментарий'}),
         }
