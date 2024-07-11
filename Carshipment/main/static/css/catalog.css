@@ -31,7 +31,7 @@
 
 .intro_text{
     font-weight: 400;
-    font-size: 33px;
+    font-size: 31px;
     text-align: center;
     padding: 20px 0;
 }
@@ -219,14 +219,14 @@ nav{
     display: block;
     width: 88.5%;
     height: 60px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     
     border-radius: 5px;
     border: 2px solid white;
     padding-left: 1%;
     margin: 0 5%;
-    margin-bottom: 2.6%;
+    margin-bottom: 2%;
 }
 
 textarea{
@@ -323,7 +323,7 @@ textarea{
     }
 
     .application{
-        height: 430px;
+        height: 490px;
         background-position: center center;
         background-size: auto;
     }
@@ -349,6 +349,7 @@ textarea{
         width: 50%;
         height: 40px;
         margin: 0 25%;
+		margin-top: 2%;
         margin-bottom: 2.6%;
     }
 

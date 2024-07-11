@@ -6,7 +6,10 @@
 
 .block1{
     height: 100vh;
-    background-image: url("/static/img/dealership.webp");
+    background-image: image-set(
+        url("/static/img/dealership.webp") type("image/webp") 1x,
+        url("/static/img/dealership.png") type("image/png") 1x
+        );
     background-position: center center;
     position: relative;
 }
@@ -28,7 +31,7 @@
 
 .intro_text{
     font-weight: 400;
-    font-size: 33px;
+    font-size: 31px;
     text-align: center;
     padding: 20px 0;
 }
@@ -54,7 +57,7 @@
 }
 
 .catalog-item{
-    margin-right: 1.2%;
+    margin: 0 0.6%;
     margin-bottom: 1.2%;
     display: inline-block;
     flex-basis: 32%;
@@ -74,7 +77,7 @@
 #logo{
     position: absolute;
     width: 80%;
-    padding: 10%;
+    padding: 5%;
     z-index: -1;
     transition: 0.3s;
 }
@@ -212,18 +215,22 @@ nav{
     font-size: 30px;
 }
 
-.application-field input{
+.application-field input, textarea{
     display: block;
     width: 88.5%;
     height: 60px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     
     border-radius: 5px;
     border: 2px solid white;
     padding-left: 1%;
     margin: 0 5%;
-    margin-bottom: 2.6%;
+    margin-bottom: 2%;
+}
+
+textarea{
+    resize: none;
 }
 
 .application-field input:focus{
@@ -254,9 +261,34 @@ nav{
     font-weight: 400;
     color: grey;
     text-align: center;
-    width: 30%;
-    margin: 0 35%;
-    margin-bottom: 2.6%;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 2.6%;
+}
+
+#message{
+    transition: 0.5s;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 45%;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+}
+
+.msg_hidden{
+    transform: translateY(-100%);
+    background-color: grey;
+    height: 0 !important;
+    padding: 0 !important;
+}
+
+.msg_error{
+    background-color: red;
+}
+
+.msg_success{
+    background-color: green;
 }
 
 
@@ -279,7 +311,6 @@ nav{
     .catalog-item{
         flex-basis: 48%;
         height: 32vh;
-        margin-right: 2%;
         margin-bottom: 2%;
     }
 
@@ -292,14 +323,14 @@ nav{
     }
 
     .application{
-        height: 430px;
+        height: 490px;
         background-position: center center;
         background-size: auto;
     }
 
     .application-field{
         width: 85%;
-        padding-top: 60px;
+        padding-top: 30px;
     }
 
     .application-title{
@@ -318,10 +349,18 @@ nav{
         width: 50%;
         height: 40px;
         margin: 0 25%;
-        margin-bottom: 4%;
+		margin-top: 2%;
+        margin-bottom: 2.6%;
+    }
+
+    .approval{
+        font-size: 11px;
+    }
+
+    #message{
+        width: 85%;
     }
 }
-
 
 @media (max-width: 376px) {
     .catalog-item{

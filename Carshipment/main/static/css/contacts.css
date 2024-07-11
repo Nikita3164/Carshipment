@@ -66,9 +66,10 @@ li{
 .application-field{
     width: 45%;
     height: 45%;
-    background-color: rgb(196 196 196);
+    background-color: rgb(255 255 255);
     margin: 0 auto;
     background-clip: content-box;
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .application-title{
@@ -81,11 +82,10 @@ li{
     display: block;
     width: 90%;
     height: 35px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
-    
-    border-radius: 5px;
-    border: 2px solid white;
+    border-radius: 3px;
+    border: 1px solid #00000027;
     padding-left: 1%;
     margin: 0 5%;
     margin-bottom: 2.6%;
@@ -235,6 +235,7 @@ textarea{
         height: 40px;
         margin: 0 25%;
         margin-bottom: 4%;
+		color: black;
     }
 
     #message{

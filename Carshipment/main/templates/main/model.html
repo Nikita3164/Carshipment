@@ -63,10 +63,10 @@
                 <li>{{ car.color }}</li>
                 <li>{{ car.engine_type }}</li>
                 <li>{{ car.engine_capacity }} л {{ car.engine_cylinder }}</li>
-                <li>{{ car.engine_power }} л.с.; {{ car.engine_power_kw }} кВт</li>
+                <li>{{ car.engine_power_hp }} л.с.; {{ car.engine_power_kw }} кВт</li>
                 <li>{{ car.transmission }}</li>
                 <li>{{ car.drive }}</li>
-                <li>{{ car.acceleration }} с</li>
+                <li>{{ car.acceleration_0_100 }} с</li>
                 <li>{{ car.max_speed }} км/ч</li>
             </ul>
         </div>
@@ -74,7 +74,7 @@
         <div class="price">
             <h2>Цена</h2>
             <div class="price-value">{{car.price}} p.</div>
-            <div class="details">Растоможен, Россия</div>
+            <div class="details">Растаможен, Россия</div>
         </div>
 
     </div>

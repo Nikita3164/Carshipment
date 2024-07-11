@@ -54,7 +54,7 @@ a {
 .menu{
     width: 37px;
     position: absolute;
-    margin-top: 11px;
+    margin-top: 10.5px;
     margin-left: 30px;
     padding-bottom: 6px;
 } 
@@ -67,7 +67,7 @@ a {
     width: 530px;
     height: 0;
     overflow: hidden;
-    transition: 0.7s;
+    transition: 1s;
     background-color: rgba(255, 255, 255, 0.88);
     /*min-width: 1100px;*/
     z-index: 2;
@@ -410,7 +410,7 @@ h1.visible {
 
 .carshipment img{
     width: 780px;
-    padding: 70px 0;
+    padding: 55px 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -419,7 +419,7 @@ h1.visible {
 .info{
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
-    font-size: 52px;
+    font-size: 33px;
 }
 
 /*Пресс-релизы*/
@@ -473,8 +473,8 @@ h1.visible {
 
 .news_text{
     font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
-    font-weight: 500;
+    font-size: 33px;
+    font-weight: 400;
     width: 98%;
     vertical-align: top;
     padding-top: 1%;
@@ -617,7 +617,7 @@ a{
 
 .sn-logo{
     display: inline-block;
-    padding: 22px;
+    padding: 28.5px;
 }
 
 .sn-logo img{
@@ -776,12 +776,8 @@ a{
         width: 380px;
     }
 
-    #promo_button_next{
-        right: 370px !important;
-    }
-
-    #promo_button_prev{
-        left: 370px !important;
+    #promo_button_next, #promo_button_prev, #promo_pagination{
+        display: none;
     }
 
     .more{
@@ -857,7 +853,7 @@ a{
     }
 
     .foot_logo{
-        width: 25%;
+        width: 20%;
         position: static;
         padding-top: 45px;
         padding-left: 320px;
@@ -881,7 +877,7 @@ a{
     }
 
     .sn{
-        padding-left: 198px;
+        padding-left: 135px;
     }
 
     .number{
@@ -966,7 +962,7 @@ a{
     }
 
     .text{
-        font-size: 50px;
+        font-size: 45px;
         width: 100%;
         top: auto;
         bottom: 190px;
@@ -979,14 +975,6 @@ a{
         left: calc(50% - 125px);
         top: auto;
         bottom: 110px;
-    }
-
-    #promo_button_next{
-        right: 140px !important;
-    }
-
-    #promo_button_prev{
-        left: 140px !important;
     }
 
     h1{
@@ -1192,7 +1180,7 @@ a{
     }
 
     .sn{
-        padding-left: 64px;
+        padding-left: 39px;
     }
 
     .sn-logo img{

@@ -8,8 +8,8 @@ import os
 import datetime
 
 # Ваша основная директория проекта
-base_dir = '/var/www/auto_site/Carshipment'
-#base_dir = 'C:/Users/fortu/OneDrive/Desktop/Сайт автомобили/auto_site/Carshipment'
+#base_dir = '/var/www/auto_site/Carshipment'
+base_dir = 'C:/Users/fortu/OneDrive/Desktop/Сайт автомобили/auto_site/Carshipment'
 
 # Имя подкаталога и имя файла
 subdirectory = 'main/Bot'
@@ -40,7 +40,7 @@ def catalog(request):
             form.instance.date = datetime.datetime.now().date()
             form.instance.time = datetime.datetime.now().time()
             form.save()
-            # path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
+            #path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
 
             # Откройте файл data.json и добавьте новую заявку к существующим данным
             with open(path, 'r') as json_file:
