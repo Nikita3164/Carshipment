@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.http import JsonResponse
 from .models import Car, News
@@ -30,15 +30,27 @@ def setup(request):
     return render(request, 'main/classification.html')
 
 
+def spam_check(name, text):
+    users_blacklist = ['AmandaEffelf']
+    words_blacklist = ['Ukraine', 'Украин', 'продвижени', 'полуприцеп', 'базы', 'бота', 'search', 'Search']
+    for i in users_blacklist:
+        if i in name:
+            return True
+    for j in words_blacklist:
+        if j in text:
+            return True
+    return False 
+
+
 def catalog(request):
     cars = Car.objects.all()
     if request.method == 'POST':
         form = RequestForm(request.POST)
-        if form.is_valid():
+        if form.is_valid() and not spam_check(form.instance.name, form.instance.comment):
             # Установите значение "Покупка автомобиля" в поле subject
             form.instance.subject = "Покупка автомобиля"
             form.instance.date = datetime.datetime.now().date()
-            form.instance.time = datetime.datetime.now().time()
+            form.instance.time = datetime.datetime.now().time().strftime('%H:%M')
             form.save()
             #path = "C:\\Users\\fortu\\OneDrive\\Desktop\\Сайт автомобили\\auto_site\\Carshipment\\main\\Bot\\data.json"
 
@@ -68,9 +80,9 @@ def catalog(request):
     return render(request, 'main/catalog.html', {'cars': cars, 'form': form})
 
 
-def model(request):
-    car = Car.objects.all()[1]
-    return render(request, 'main/model.html', {'car': car, 'images': ['car1.png', 'car2.png', 'cars.png']})
+def model(request, id):
+    car = get_object_or_404(Car, id=id)
+    return render(request, 'main/model.html', {'car': car, 'images': car.img_addresses.split(', ')})
 
 
 def news(request):
@@ -82,10 +94,10 @@ def news(request):
 def contacts(request):
     if request.method == 'POST':
         form = RequestFormExtended(request.POST)
-        if form.is_valid():
+        if form.is_valid() and not spam_check(form.instance.name, form.instance.comment):
 
             form.instance.date = datetime.datetime.now().date()
-            form.instance.time = datetime.datetime.now().time()
+            form.instance.time = datetime.datetime.now().time().strftime('%H:%M')
             form.save()
 
             # Установите флаг в сессии, чтобы указать успешную отправку формы
@@ -123,11 +135,11 @@ def contacts(request):
 def promotion(request):
     if request.method == 'POST':
         form = RequestForm(request.POST)
-        if form.is_valid():
+        if form.is_valid() and not spam_check(form.instance.name, form.instance.comment):
             # Установите значение "Покупка автомобиля" в поле subject
             form.instance.subject = "Продажа автомобиля"
             form.instance.date = datetime.datetime.now().date()
-            form.instance.time = datetime.datetime.now().time()
+            form.instance.time = datetime.datetime.now().time().strftime('%H:%M')
             form.save()
 
             # Установите флаг в сессии, чтобы указать успешную отправку формы

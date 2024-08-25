@@ -776,7 +776,7 @@ a{
         width: 380px;
     }
 
-    #promo_button_next, #promo_button_prev, #promo_pagination{
+    .swiper-button{
         display: none;
     }
 
@@ -838,18 +838,6 @@ a{
 
     .content{
         width: calc(100% - 200px)
-    }
-
-    .swiper-button-next, .swiper-rtl .swiper-button-prev{
-        right: 2px !important; 
-        left: auto;  
-        --swiper-navigation-size: 25px;
-    }
-    
-    .swiper-button-prev, .swiper-rtl .swiper-button-next{
-        left: 2px !important; 
-        right: auto;
-        --swiper-navigation-size: 25px;
     }
 
     .foot_logo{

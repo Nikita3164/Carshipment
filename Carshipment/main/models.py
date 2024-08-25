@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Car(models.Model):
+    id = models.AutoField(primary_key=True)
     manufacturer = models.TextField()
     model = models.TextField()
     generation = models.TextField() 
@@ -18,12 +19,13 @@ class Car(models.Model):
     acceleration_0_100 = models.DecimalField(max_digits=5, decimal_places=2)
     max_speed = models.IntegerField()
     price = models.TextField()
+    preview = models.TextField()
     img_addresses = models.TextField()
     class Meta:
         db_table = 'Cars'
 
     def __str__(self):
-        return f"{self.model} ({self.year})"
+        return f"{self.model} ({self.year}) - ID: {self.id}"
     
 
 class News(models.Model):

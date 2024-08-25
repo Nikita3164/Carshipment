@@ -1,7 +1,8 @@
 {% extends 'main/base.html' %}
 
 {% block stylesheet %}
-    <link type="text/css" rel="stylesheet" href="static/css/model.css">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/model.css' %}">
 {% endblock %}
 
 {% block title %}{{ car.model }} {{  car.generation  }}{% endblock %}
@@ -15,18 +16,16 @@
             <div class="swiper-wrapper">
                 {% for image in images %}
                     <div class="swiper-slide">
-                        <img src="static/img/{{ image }}">
+                        <img src="{% static 'img/car-img/' %}{{ image }}.png">
                     </div>
                 {% endfor %}
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
         <div thumbsSlider="" class="swiper mySwiper">
             <div class="swiper-wrapper">
                 {% for image in images %}
                     <div class="swiper-slide">
-                        <img src="static/img/{{ image }}">
+                        <img src="{% static 'img/car-img/' %}{{ image }}.png">
                     </div>
                 {% endfor %}
             </div>
@@ -71,12 +70,22 @@
             </ul>
         </div>
 
-        <div class="price">
-            <h2>Цена</h2>
-            <div class="price-value">{{car.price}} p.</div>
-            <div class="details">Растаможен, Россия</div>
-        </div>
+        <div class="block-right">
+            <div class="options">
+                <h2>Опции</h2>
+                <div class="file">Открыть или скачать(PDF)</div>
+            </div>
 
+            <div class="price">
+                <h2>Цена</h2>
+                <div class="price-value">{{car.price}} p.</div>
+                <div class="details">Растаможен, Россия</div>
+            </div>
+        </div>
+    </div>
+    <div class="dark-background">
+        <div class="contact">Чтобы приобрести или задать вопрос, свяжитесь с нами</div>
+        <div class="buy"><a href="/catalog"><div class="buy-border"><div class="buy-text">Связаться с нами</div></div></a></div>
     </div>
 {% endblock %}
 {% block script %}

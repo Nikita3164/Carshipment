@@ -3,7 +3,7 @@ let form_id = form.id;
 let url = "/" + form_id;
 
 const users_blacklist = ['AmandaEffelf'] 
-const words_blacklist = ['Ukraine', 'Украина', 'продвижение', 'продвижения', 'полуприцеп', 'базы', 'бота', 'search', 'Search']
+const words_blacklist = ['Ukraine', 'Украин', 'продвижени', 'полуприцеп', 'базы', 'бота', 'search', 'Search']
 
 form.addEventListener("submit", function(event) {
     event.preventDefault(); // Предотвращаем отправку формы по умолчанию

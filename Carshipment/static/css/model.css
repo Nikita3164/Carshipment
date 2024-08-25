@@ -18,11 +18,6 @@ h1 {
   padding: 20px 0;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-
   .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -39,7 +34,7 @@ h1 {
   }
 
   .swiper {
-    width: 100%;
+    width: 90%;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -52,7 +47,6 @@ h1 {
 
   .mySwiper2 {
     height: 80%;
-    width: 100%;
   }
 
   .mySwiper {
@@ -88,7 +82,7 @@ h1 {
     vertical-align: top;
   }
 
-  .description-text, .price-value, .details{
+  .description-text, .price-value, .details, .file{
     font-size: 26px;
     font-weight: 400;
   }
@@ -110,10 +104,61 @@ h1 {
     font-weight: 400;
   }
 
-  .price{
+  .block-right{
     float: right;
-    padding-left: 80px;
   }
+
+  .dark-background{
+    background-image: url("/static/img/model-background.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+  }
+
+  .contact{
+    color: #cdcdcd;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+.buy{
+    margin: 0 auto;
+    width: 20%;
+    height: 40px;
+    transition: 0.6s;
+}
+
+.buy-border{
+    border: 2px solid #cdcdcd;
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.buy-text{
+    color: #cdcdcd;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 8px;
+    transition: 0.3s;  
+}
+
+.buy:hover .buy-border{
+    border-color: white;
+    cursor: pointer;
+}
+
+.buy:hover .buy-text{
+    color: white;
+}
+
 
   @media (max-width: 420px){
     .container1{
@@ -136,6 +181,10 @@ h1 {
       padding-left: 20px;
    }
 
+   .block-right{
+    float: none;
+   }
+
     .price {
       padding-left: 0;
       padding-bottom: 15px;
@@ -144,5 +193,24 @@ h1 {
 
     .price-value, .details{
       font-size: 20px;
+    }
+
+    .file{
+      font-size: 20px;
+    }
+
+    .dark-background{
+      background-position: left center;
+      height: 50vh;
+    }
+
+    .buy{
+      width: 45%;
+      height: 50px;
+    }
+
+    .buy-text{
+      font-size: 17px;
+      padding-top: 12px;
     }
   }

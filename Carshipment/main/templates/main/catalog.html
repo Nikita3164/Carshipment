@@ -27,12 +27,14 @@
             <div class="items">
                 {% for car in cars %}
                 <div class="catalog-item">
-                    <div class="item-img">
-                        <img id="logo" src="/static/img/car-logo/{{ car.manufacturer }}.png">
-                        <img id="main" src="/static/img/car-img/{{ car.img_addresses }}.png" loading="lazy">
-                    </div>
-                    <div class="item-title"><b>Место свободно</b></div>
-                    <div class="item-subtitle">На фото: <br> {{ car.model }}</div>
+                    <a href="/catalog/{{ car.id }}">
+                        <div class="item-img">
+                            <div class="proced_text">Перейти</div>
+                            <img id="main" src="/static/img/car-img/{{ car.preview }}.png" loading="lazy">
+                        </div>
+                        <div class="item-title"><b>Место свободно</b></div>
+                        <div class="item-subtitle">На фото: <br> {{ car.model }}</div>
+                    </a>
                 </div>
                 {% endfor %}
             </div>
@@ -68,7 +70,7 @@
                 {{ form.email }}
                 {{ form.comment }}
                 <button class="apply-button" type="submit">Обратиться</button>
-                <div class="approval">Нажимая на кнопку "Обратиться", вы даете свое <a href="#">согласие</a> на обработку данныхю</div>
+                <div class="approval">Нажимая на кнопку "Обратиться", вы соглашаетесь с нашей политикой <a href="/agreement">Обработки данных</a> и <a href="/privacy">Обеспечения безопасности данных</a></div>
             </div>
             <!-- Блок сообщений -->
             <div id="message" class="msg_hidden"></div>
